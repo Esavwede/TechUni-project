@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-359829758"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'AW-359829758');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SITE FAVICON -->
+    <link href="../images/TechUni Icon@300x.png" rel="icon">
+    <link href="../images/TechUni Icon@300x.png" rel="apple-touch-icon">
+   
+    <link href="css/output.css" rel="stylesheet" />
+   
+    
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+       
+
+    <!-- EXTERNAL FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=DM+Serif+Display:ital@1&display=swap" rel="stylesheet">
+   
+
+    <script src="js/main.js" defer></script>
+
+     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+ 
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  background-color: #EFEFEF;
+}
+.slide-container{
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+}
+.slide-content{
+  margin: 0 40px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.card{
+  border-radius: 25px;
+  background-color: #FFF;
+}
+.image-content,
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 14px;
+}
+.image-content{
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+.overlay{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 25px 25px 0 25px;
+}
+.overlay::before,
+.overlay::after{
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: #7915a8;
+}
+.overlay::after{
+  border-radius: 0 25px 0 0;
+  background-color: #FFF;
+}
+.card-image{
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #FFF;
+  padding: 3px;
+}
+.card-image .card-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #7915a8;
+}
+.name{
+  font-size: 18px;
+  font-weight: 500;
+  color: #333;
+}
+.description{
+  font-size: 14px;
+  color: #707070;
+  text-align: center;
+}
+.button{
+  border: none;
+  font-size: 16px;
+  color: #FFF;
+  padding: 8px 10px;
+  background-color: purple;
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.button:hover{
+  background: #7915a8;
+}
+
+.swiper-navBtn{
+  color: white;
+  background-color: #7915a8;
+  border-radius: 50%;
+  padding: 1.5rem;
+  transition: color 0.3s ease;
+}
+.swiper-navBtn:hover{
+  color: #ddd;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after{
+  font-size: 20px;
+}
+.swiper-button-next{
+  right: 0;
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-pagination-bullet{
+  background-color: purple;
+  opacity: 1;
+  text-align: center;
+  margin: 1rem auto;
+  
+}
+.swiper-pagination-bullet-active{
+  background-color: #7915a8;
+  text-align: center;
+  
+}
+
+ /* .rating{
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+}
+
+ .rating i{
+  font-size: 18px;
+  margin: 0 2px;
+  color: #0f851e;
+} */
+
+@media screen and (max-width: 768px) {
+  .slide-content{
+    margin: 0 10px;
+  }
+  /* .swiper-navBtn{
+    display: none;
+  } */
+}
+
+.media-icons{
+  position: absolute;
+  bottom: 16px;
+  right: 15px;
+  margin-top: 12px;
+  justify-content: flex-end;
+}
+.media-icons i{
+  display: inline-flex;
+  margin: 0 4px;
+  font-size: 16px;
+  color: #092c3e;
+  opacity: 0.7;
+  cursor: pointer;
+}
+.media-icons i:hover{
+  opacity: 1;
+}
+    </style>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1908748432791340');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1908748432791340&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<body class="min-h-screen bg-white  text-white font-Header">
+    <header class="sticky top-0 z-50 bg-white  font-Header text-black   mx-auto">
+        <section class="mx-auto flex max-w-full items-center justify-between p-4">
+            <a class="navbar-brand " href="#"><img src="images/TechUni Logo@300x.png" alt=""  width="150px"></a>
+            <div class="bg-purple-900 sm:bg-white  shadow-xl  sm:shadow-none sm:p-0 sm:rounded-none p-3 rounded-full">
+                <button id="hamburger-button" class="relative h-8 w-8 cursor-pointer text-xl md:hidden">
+                    <!-- &#9776; -->
+                    <div
+                        class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white  transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']">
+                    </div>
+                </button>
+                <nav class="hidden  space-x-8 text-base md:block" aria-label="main">
+                    <a href="/" class="w-full py-6 text-center hover:opacity-90">Home </a>
+                    <a href="https://www.careeredu.co.uk/" class="w-full py-6 text-center hover:opacity-90">Visit Our Website </a>
+                    <a href="/courses" class="w-full py-6 text-center hover:opacity-90">Courses </a>
+                    <a href="/faculties" class="w-full py-6 text-center hover:opacity-90">Faculties </a>
+                    <a href="/students" class="w-full py-6 text-center hover:opacity-90">Students </a>
+                    <a href="/faq" class="w-full py-6 text-center hover:opacity-90">Faqs</a>
+                   
+                   
+                    
+                </nav>
+            </div>
+        </section>
+        <section id="mobile-menu"
+            class="top-68 justify-content-center absolute hidden w-full origin-top animate-open-menu flex-col bg-white text-black  text-2xl">
+            <!-- <button class="text-8xl self-end px-6">
+                    &times;
+                </button> -->
+            <nav class="flex min-h-screen  flex-col items-center py-8" aria-label="mobile">
+                <a href="/" class="w-full py-6 text-center hover:opacity-90"><i class="fas fa-home text-purple-900"></i> Home</a>
+                <a href="https://www.careeredu.co.uk/" class="w-full py-6 text-center hover:opacity-90"><i class="fas fa-globe-africa text-purple-900"></i> Visit Our Website</a>
+                <a href="/courses" class="w-full py-6 text-center hover:opacity-90"><i
+                        class="fas fa-user-graduate text-purple-900"></i>
+                    Courses</a>
+                <a href="/faculties" class="w-full py-6 text-center hover:opacity-90"><i class="fas fa-chalkboard-teacher text-purple-900"></i>
+                    Faculties</a>
+                <a href="/students" class="w-full py-6 text-center hover:opacity-90"><i class="fas fa-graduation-cap text-purple-900"></i> Students  </a>
+                <a href="/faq" class="w-full py-6 text-center hover:opacity-90"><i class="fas fa-question text-purple-900"></i> Faqs  </a>
+               
+               
+               
+               
+                
+            </nav>
+        </section>
+    </header>
+
+<title>TechUni : Cohorts</title>
+   
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1908748432791340');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1908748432791340&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+       
+</head>
+
+
+
+    <h2 class="text-center my-12 text-2xl font-bold text-purple-900">JANUARY 2023 COHORT</h2>
+
+    <div class="slide-container swiper widescreen:section-min-height  tallscreen:section-min-height">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort1/Raphael1.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Raphael Oletu </h2>
+                        <!-- <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div> -->
+                        <p class="description">Basic Data Analysis</p>
+    
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort1/Stephen2.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Chukwu .S. Chimaobi <i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">Basic Data Analysis</p>
+                        
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort1/Isiah3.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Isaiah .G. Adepoju <i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">E-book Publishing</p>
+                        
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort1/Precious4.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Precious .C. Agbasu <i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">Basic Data Analysis</p>
+                        
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort1/Rebecca5.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Rebecca .S. Anosike <i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">Basic Data Analysis</p>
+                        
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort1/Obinna6.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Obinna Aligwekwe <i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">General Computing</p>
+                        
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort1/Charles7.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Charles Uche <i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">Basic Data Analysis</p>
+                        
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort1/Ejike8.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Akpu .E. Goodluck <i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">Digital Marketing</p>
+                       
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort1/Chika9.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Nnaji Chikodili <i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">Basic Data Analysis</p>
+                        
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort1/Godson10.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Kenechukwu .G. Achebe <i class="bx bxs-badge-check text-2xl text-green-600"></i>
+                        </h2>
+                        <p class="description">Digital Marketing</p>
+                        
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort1/Liz11.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Olajide .T. Elizabeth <i class="bx bxs-badge-check text-2xl text-green-600"></i>
+                        </h2>
+    
+                        <p class="description">Video Editing</p>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+
+    <h2 class="text-center my-12 text-2xl font-bold text-purple-900">FEBRUARY 2023 COHORT</h2>
+    
+    <div class="slide-container swiper widescreen:section-min-height  tallscreen:section-min-height">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort2/Alina N Esate DM.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Alina .N. Esate </h2>
+                        <!-- <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div> -->
+                        <p class="description">Digital Marketing</p>
+    
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort2/Chibuike A Ile DA.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Chibuike .A. Ile <i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">Intermediate Data Analysis</p>
+    
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort2/Ofojebe Lydia UIUX.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Ofojebe Lydia<i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">UI/UX Designing</p>
+    
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort2/Fred Njoku UI.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Fred Njoku<i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">UI/UX Designing</p>
+    
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort2/Ekwonna Chinasa UI.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Ekwonna Chinasa <i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">UI/UX Designing</p>
+    
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort2/Ifeyinwa Vivian ui.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Ifeyinwa Vivian <i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">UI/UX Designing</p>
+    
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort2/Akinsanya A Mobolaji UI.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Akinsanya .A. Mobolaji<i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">UI/UX Designing</p>
+    
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort2/Esther Unachukwu DA.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Esther Unachukwu<i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">Basic Data Analysis</p>
+    
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort2/Nwaulu Onyekachi VE.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Nwaulu Onyekachi <i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">Video Editing</p>
+    
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort2/Chisom Asike VE.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Chisom Asike <i class="bx bxs-badge-check text-2xl text-green-600"></i>
+                        </h2>
+                        <p class="description">Video Editing</p>
+    
+                    </div>
+                </div>
+               
+
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                    
+                            <div class="card-image">
+                                <img src="images/Cohort2/Ifeoma Ikem DA.jpeg" alt="" class="card-img">
+                            </div>
+                        </div>
+                    
+                        <div class="card-content">
+                            <h2 class="name">Ifeoma Ikem <i class="bx bxs-badge-check text-2xl text-green-600"></i>
+                            </h2>
+                            <p class="description">Basic Data Analysis</p>
+                    
+                        </div>
+                    </div>
+
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                    
+                            <div class="card-image">
+                                <img src="images/Cohort2/Otoobong O Essien DA.jpeg" alt="" class="card-img">
+                            </div>
+                        </div>
+                    
+                        <div class="card-content">
+                            <h2 class="name">Otoobong .O. Essien <i class="bx bxs-badge-check text-2xl text-green-600"></i>
+                            </h2>
+                            <p class="description">Basic Data Analysis</p>
+                    
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                    
+                            <div class="card-image">
+                                <img src="images/Cohort2/Egbewunmi Ridwan DA.jpeg" alt="" class="card-img">
+                            </div>
+                        </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Egbewunmi Ridwan <i class="bx bxs-badge-check text-2xl text-green-600"></i>
+                        </h2>
+    
+                        <p class="description">Basic Data Analysis</p>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+
+<h2 class="text-center my-12 text-2xl font-bold text-purple-900">MARCH 2023 COHORT</h2>
+    
+    <div class="slide-container swiper widescreen:section-min-height  tallscreen:section-min-height">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort3/Esther.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Esther Unachukwu </h2>
+                        <!-- <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div> -->
+                        <p class="description">Intermediate Data Analysis</p>
+    
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/cohort3/Chimaobi.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Chukwu .S. Chimaobi <i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">Advanced Data Analysis</p>
+    
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort3/Chioma.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Ejim .C. Lilian<i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">Basic Data Analysis</p>
+    
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort3/Okechukwu.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Onyemenam .K. Okechukwu<i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">Basic Data Analysis</p>
+    
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort3/Bede.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Ofoma .E. Bede <i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">Basic Data Analysis</p>
+    
+                    </div>
+                </div>
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+    
+                        <div class="card-image">
+                            <img src="images/Cohort3/Stella.jpeg" alt="" class="card-img">
+                        </div>
+                    </div>
+    
+                    <div class="card-content">
+                        <h2 class="name">Anyanwu .A. Stella<i class="bx bxs-badge-check text-2xl text-green-600"></i></h2>
+                        <p class="description">Basic Data Analysis</p>
+    
+                    </div>
+               
+                </div>
+            </div>
+        </div>
+    
+        <div class="swiper-button-next swiper-navBtn"></div>
+        <div class="swiper-button-prev swiper-navBtn"></div>
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+
+
+    <footer class="flex text-xl sm:flex-row flex-col p-3 justify-between gap-4 items-start sm:items-center text-start text-black my-20">
+                <div>
+
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="faculty.html">Our Faculties</a></p>
+                    <p><a href="students.html">Our Students</a></p>
+                </div>
+                <div>
+                    <p><a href="courses.html">Our Courses</a></p>
+                    <p><a href="faq.html">Faqs</a></p>
+                    <p><a href="">Our Community</a></p>
+                    
+                </div>
+                <div>
+                    <p><a href="https://www.careeredu.co.uk/">Visit Our CareerEdu Website</a></p>
+                    <p><a href="">Career Oppurtunities</a></p>
+                   
+                    
+                </div>
+               
+                <div class="flex flex-row gap-4 items-start justify-start">
+                    <a href="https://web.facebook.com/techuniglobal" class="mx-3 mt-2 text-3xl text-purple-800 shadow-3xl shadow-black"><i class="fab fa-facebook"></i></a>
+            <a href="https://instagram.com/techuni_?igshid=YmMyMTA2M2Y=" class="mx-3 mt-2 text-3xl text-violet-800 shadow-3xl shadow-black"><i class="fab fa-instagram"></i></a>
+            </div>
+                
+            </footer>
+
+
+       
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex  align-items-center justify-content-center"><i
+            class="fas fa-arrow-circle-up"></i></a>
+    
+    <script src="js/preload.js"></script>
+
+               
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/cohort.js"></script>
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1908748432791340');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1908748432791340&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</body>
+
+</html>
