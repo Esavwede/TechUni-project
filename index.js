@@ -33,13 +33,14 @@ const postsSchema = {
 const Post = mongoose.model("Post", postsSchema);
 
 app.get("/jobs", function (req, res) {
-  Post.find({}).then(function(err, posts) {
+  Post.find({}).then(function(posts) {
     res.render("jobs", {posts: posts});
 
   })
     .catch(function(err){
     console.log(err);
   })
+
    
 });
 
@@ -76,20 +77,21 @@ post.save()
 app.get("/posts/:postId", function (req, res) {
   const requestedPostId = req.params.postId;
 
-  Post.findOne({ _id: requestedPostId }, function (err, post) {
-    res.render("post", {
-      title: post.title,
-      role: post.role,
-      location: post.location,
-      salary: post.salary,
-      qualification: post.qualification,
-      experience: post.experience,
-      responsibilities: post.responsibilities,
-      skills: post.skills,
-      content: post.content,
-    });
-  });
-  
+  Post.findOne({ _id: requestedPostId }).then(function (post) {
+    res
+      .render("post", {
+        title: post.title,
+        role: post.role,
+        location: post.location,
+        salary: post.salary,
+        qualification: post.qualification,
+        experience: post.experience,
+        responsibilities: post.responsibilities,
+        skills: post.skills,
+        content: post.content,
+      })
+      
+  })
 });
 
 

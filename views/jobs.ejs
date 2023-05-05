@@ -1,25 +1,44 @@
-<%- include("partials/secondary_header"); -%>
+<%- include("partials/primary_header"); -%>
+ <title>TechUni : Jobs</title>
 
-<h1>APPLY TO JOBS</h1>
+<h1 class="font-bold text-violet-800 text-center text-3xl my-12">APPLY TO JOBS</h1>
 
 <% posts.forEach(function(post){ %>
 
-<h1><%=post.title%></h1>
+<ul class="mx-auto my-12 flex list-none flex-col items-center justify-between align-middle gap-8 lg:flex-row lg:text-2xl sm:text-base">
+  <li  class="flex mx-3 w-full flex-col items-center py-6 px-4 shadow-xl sm:mx-auto bg-papayawhip-light text-violet-800 sm:w-1/2 sm:text-base">
+    <h1 class="text-2xl"><%=post.title%></h1>
 
-<p><%=post.role%></p>
-<p><%=post.location%></p>
-<p><%=post.salary%></p>
-<p><%=post.qualification%></p>
-<p><%=post.experience%></p>
-<p><%=post.responsibilities%></p>
-<p><%=post.skills%></p>
-<p>
-  <%=post.content.substring(0, 50) + " ..."%>
+      <p><%=post.role%></p>
+      <p><%=post.location%></p>
+      <p><%=post.salary%></p>
+      <p><%=post.qualification%></p>
+      <p><%=post.experience%></p>
+      <p><%=post.responsibilities%></p>
+      <p><%=post.skills%></p>
+      <p class="p-3">
+        <%=post.content.substring(0, 100) + " ..."%>
 
-  <a href="/posts/<%=post._id%>">Read More</a>
-</p>
+       
+      </p>
+       <a class=" w-full sm:w-1/2 text-center rounded-xl p-3 my-3 bg-violet-800 text-white" href="/posts/<%=post._id%>">Read More</a>
+
+  </li>
+</ul>
+
+  <div id="preloader">
+     <div id="loader"></div>
+  </div>
+    <a href="#" class="back-to-top d-flex  align-items-center justify-content-center"><i
+            class="fas fa-arrow-circle-up"></i></a>
+
+<script src="js/preload.js"></script>
+
 
 <% }) %>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
 
+
+
+
+  

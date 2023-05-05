@@ -1,5 +1,87 @@
-<%- include("partials/secondary_header"); -%>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-359829758"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'AW-359829758');
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SITE FAVICON -->
+    <link href="./images/TechUni Icon@300x.png" rel="icon">
+    <link href="./images/TechUni Icon@300x.png" rel="apple-touch-icon">
+    <title>TechUni : FAQ</title>
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- EXTERNAL FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Lato:wght@400;700&family=Poppins&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+   
+
+    <script src="js/main.js" defer></script>
+
+    <style>
+        .fixed-link{
+            position: fixed;
+            top: 10;
+            right: 0;
+            z-index:100;
+        }
+
+         /* nav a:hover {
+
+        color: indigo !important;
+        text-decoration: none !important;
+        border-bottom: 0.3rem solid indigo !important;
+        padding: 0.3rem !important;
+        transition: all 0.5s ease-in-out 0.5s;
+    } */
+    body{
+           
+      font-family: 'Poppins';
+      background-color: aliceblue;
+
+        }
+        
+    </style>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1908748432791340');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1908748432791340&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+</head>
+
+<a class="m-3 btn btn-outline-primary pt-6" href="/jobs"> <i class="fas fa-arrow-alt-circle-left"></i> Back to Jobs</a>
+  <div style="text-align: center; color: #5b21b6; margin: 4rem;">
 <h1><%=title%></h1>
 <p><%=role%></p>
 <p><%=location%></p>
@@ -9,5 +91,9 @@
 <p><%=responsibilities%></p>
 <p><%=skills%></p>
 <p><%=content%></p>
+  </div>
+
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
