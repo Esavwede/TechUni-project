@@ -1,17 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-   "./src/*.{html,js,css}",
-    "./views/*.ejs",
-  
-  ],
-   
+  content: ["./src/*.{html,js,css}", "./views/*.ejs"],
+
   theme: {
     extend: {
       fontFamily: {
+        Header: "Roboto",
         Body: "Poppins",
         Alt: "Pacifico",
-        
       },
       colors: {
         papayawhip: {
@@ -35,12 +31,13 @@ module.exports = {
         "open-menu": "open-menu 0.5s ease-in-out forwards",
       },
     },
-    
   },
- 
- plugins: [{
+
+  plugins: [
+    {
       tailwindcss: {},
       autoprefixer: {},
-    },]
-}
+    },
+  ],
+};
 

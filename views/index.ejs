@@ -1,5 +1,129 @@
 <%- include("partials/primary_header"); -%>
  <title>TechUni</title>
+ <style>
+  .main-lower {
+  height: 100vh;
+  width: 100%;
+}
+.wrapper,
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.slide {
+  overflow: hidden;
+}
+.slide::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+.slide .image {
+  height: 100%;
+  width: 100%;
+  object-fit:scale-down;
+  background-color: #000;
+}
+.slide .image-data {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+}
+.image-data span.text {
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+.image-data h2 {
+  font-size: 45px;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 3rem;
+}
+a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 0.375rem;
+  color: #333;
+  background: #fff;
+  text-decoration: none;
+  margin-top: 25px;
+  transition: all 0.3s ease;
+}
+a.button:hover {
+  color: #fff;
+  background-color: #7e22ce;
+}
+
+/* swiper button css */
+.nav-btn {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+}
+.nav-btn:hover {
+  background: #7e22ce;
+}
+.swiper-button-next {
+  right: 50px;
+}
+.swiper-button-prev {
+  left: 50px;
+}
+.nav-btn::before,
+.nav-btn::after {
+  font-size: 25px;
+  color: #fff;
+}
+.swiper-pagination-bullet {
+  opacity: 1;
+  height: 12px;
+  width: 12px;
+  background-color: #fff;
+  visibility: hidden;
+}
+.swiper-pagination-bullet-active {
+  border: 2px solid #fff;
+  background-color: #7e22ce;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-btn {
+    visibility: hidden;
+  }
+  .swiper-pagination-bullet {
+    visibility: visible;
+  }
+.image-data h2 {
+    font-size: 30px;
+
+}
+}
+
+   
+ </style>
+ <header class=" z-50 bg-papayawhip-light  font-Header text-black   mx-auto">
+        <section class="mx-auto flex max-w-full items-center justify-center p-4">
+            
+            <div class=" text-center     shadow-xl w-full  p-3 rounded-full">
+                
+                <nav class=" space-x-8 text-base md:block" aria-label="main">
+                  <p class=" text-md sm:text-xl font-Header font-bold text-violet-800"> <i class="bi bi-arrow-down-right-circle p-3 rounded-xl font-bold text-2xl text-violet-800"></i> Next Cohort Begins on June 5th <i class=" bi bi-arrow-down-left-circle p-3 rounded-xl font-bold text-2xl text-violet-800"></i> </p> 
+                   
+            </div>
+        </section>
+        
+       
+    </header>
     <main class=" w-full">
        <!-- <a  href="https://Store.techuni.io"
                     class="my-3 mx-6 z-10 text-white hover:bg-violet-900 bg-violet-700 p-6 flex justify-center items-center sm:w-1/2 w-72  rounded-md shadow-xl    text-xl" target="_blank"> <i class="fas fa-star"></i>
@@ -22,7 +146,7 @@
                 </h2> -->
                 
                
-                <h2 class="mt-6 font-bold font-Body w-full intro  sm:py-3      sm:text-start  text-violet-800">
+                <h2 class="mt-6 font-bold font-Body w-full intro  sm:py-3 text-center     sm:text-start  text-violet-800">
                     Let's Help Upskill Your Tech Skills
                   <!-- <span class="text-violet-800">Let's</span>  Help You <span class="text-violet-800">Upskill </span> Your <span class="text-violet-800">Tech</span>  skills -->
                 </h2>
@@ -31,7 +155,7 @@
                 
                    
                
-                <p class="py-3 text-xl rounded-xl my-3 text-slate-600 font-Body   border-solid border-0 w-full  sm:text-justify ">
+                <p class="py-3 text-xl text-center rounded-xl my-3 text-slate-600 font-Body   border-solid border-0 w-full  sm:text-justify ">
                     Tech Uni  is an online digital platform that will accelerate tech education in Africa with live training and courses.
                     <!-- Courses are practical, implementation-based, taught by experienced, dedicated faculty and designed to help accelerate
                       tech adoption, reduce unemployment and pull young people out of multi-dimensional poverty. Each course is packaged as a
@@ -138,14 +262,14 @@
         
               <section id=""
             class=" p-6 bg-papayawhip-light rounded-full font-Body">
-            <h2 class="mb-6 text-center font-Alt text-3xl text-violet-800 font-bold  sm:text-5xl" >
+            <h2 class="mb-6 text-center font-Body text-3xl text-violet-800 font-bold  sm:text-5xl" >
                 What Do <span class="mt-12">We</span> Offer ?
             </h2>
             <ul class="mx-auto my-12 flex list-none flex-col items-center gap-8 sm:flex-row">
                 <li data-aos="fade-down" data-aos-delay="400"
                     class="flex w-full flex-col items-center rounded-3xl  py-6 px-2  sm:w-5/6">
                    
-                    <i class="fas fa-cubes text-5xl text-violet-800"></i>
+                    <i class="bi bi-boxes text-5xl text-violet-800"></i>
                     <h3 class="text-center text-2xl font-bold text-slate-900 my-3">
                         In-demand Skills
                     </h3>
@@ -156,7 +280,7 @@
                 </li>
                 <li data-aos="fade-up" data-aos-delay="400"
                     class="flex w-full flex-col items-center rounded-3xl  py-6 px-2 sm:w-5/6">
-                    <i class="fas fa-chalkboard-teacher text-5xl text-violet-800"></i>
+                    <i class="bi bi-patch-check text-5xl text-violet-800"></i>
                     <h3 class="text-center text-2xl font-bold text-slate-900 my-3">
                         Great Tutors
                     </h3>
@@ -167,7 +291,7 @@
                 </li>
                  <li data-aos="fadeIn" data-aos-delay="400"
                     class="flex w-full flex-col items-center rounded-3xl  py-6 px-2 sm:w-5/6">
-                    <i class="fas fa-business-time text-5xl text-violet-800"></i>
+                    <i class="bi bi-alarm text-5xl text-violet-800"></i>
                     <h3 class="text-center text-2xl my-3 font-bold text-slate-900">
                         Flexible Learning System
                     </h3>
@@ -176,16 +300,190 @@
                     </p>
                     
                 </li>
+
+                
+                
+
+            </ul>
+            <ul class="mx-auto my-12 flex list-none flex-col items-center gap-8 sm:flex-row">
+                <li data-aos="fade-down" data-aos-delay="400"
+                    class="flex w-full flex-col items-center rounded-3xl  py-6 px-2  sm:w-5/6">
+                   
+                    <i class="bi bi-briefcase text-5xl text-violet-800"></i>
+                    <h3 class="text-center text-2xl font-bold text-slate-900 my-3">
+                        Job Oppurtunities
+                    </h3>
+                    <p class="mt-2 text-center text-xl text-slate-500  sm:block">
+                        We are not just satisfied with teaching you, we also want to see you trying out these skills by applying for various roles and in various companies. We post jobs on our platform and we are building techjobber to ensure we make your dreams come true.
+                    </p>
+                    
+                </li>
+                
+                 <li data-aos="fadeIn" data-aos-delay="400"
+                    class="flex w-full flex-col items-center rounded-3xl  py-6 px-2 sm:w-5/6">
+                    <i class="bi bi-people text-5xl text-violet-800"></i>
+                    <h3 class="text-center text-2xl my-3 font-bold text-slate-900">
+                        Great Community
+                    </h3>
+                    <p class="mt-2  text-center text-xl text-slate-500  sm:block">
+                        We Know the importance of Community and Collaboration, we have a community where our students discuss, share ideas and help each other grow.
+                    </p>
+                    
+                </li>
+
+                <li data-aos="fade-up" data-aos-delay="400"
+                    class="flex w-full flex-col items-center rounded-3xl  py-6 px-2 sm:w-5/6">
+                    <i class="bi bi-mortarboard text-5xl text-violet-800"></i>
+                    <h3 class="text-center text-2xl font-bold text-slate-900 my-3">
+                        Course Cerification
+                    </h3>
+                    <p class="mt-2  text-center text-xl text-slate-500  sm:block">
+                        We grant Certificates at the end of the courses as a proof of enrolment and excellence in the discipline.
+                    </p>
+                    
+                </li>
                 
 
             </ul>
         </section>
+<h1 class="mb-6 text-center font-Body text-3xl text-violet-800 font-bold  sm:text-5xl">Trending <span class="mt-3"><a class="mt-3 sm:text-3xl hover:underline" href="/courses">See all</a></span></h1>
+    
+
+       <section class="main-lower swiper mySwiper">
+      <div class="wrapper swiper-wrapper">
+        <div class="slide swiper-slide">
+          <img src="images/faculties/fanen.jpeg" alt="" class="image" />
+          <div class="image-data">
+            <span class="text"></span>
+            <h2>
+               <br />
+              Data Analysis 
+            </h2>
+            <a href="/courses" class="button">About Us</a>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="images/faculties/Chekwus.jpeg" alt="" class="image" />
+          <div class="image-data">
+            <span class="text"></span>
+            <h2>
+              Mobile App Development & <br />
+              Wordpress
+            </h2>
+            <a href="/courses" class="button">About Us</a>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="images/faculties/Maurice.jpeg" alt="" class="image" />
+          <div class="image-data">
+            <span class="text"></span>
+            <h2>
+              Front-end & Backend <br /> Web Development
+    
+            </h2>
+            <a href="#" class="button">About Us</a>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="images/faculties/Precious.jpeg" alt="" class="image" />
+          <div class="image-data">
+            <span class="text"></span>
+            <h2 class="mt-6">
+              UI/UX <br /> Designing
+              
+            </h2>
+            <a href="/courses" class="button">About Us</a>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="images/faculties/Chikwado.jpeg" alt="" class="image" />
+          <div class="image-data">
+            <span class="text"></span>
+            <h2>
+              Forex Trading <br />
+            
+            </h2>
+            <a href="#" class="button">About Us</a>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="images/faculties/Chimdindu.jpeg" alt="" class="image" />
+          <div class="image-data">
+            <span class="text"></span>
+            <h2>
+              E-book Publishing & <br /> Copyrighting
+              
+            </h2>
+            <a href="/courses" class="button">About Us</a>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="images/faculties/Dayo.jpeg" alt="" class="image" />
+          <div class="image-data">
+            <span class="text"></span>
+            <h2>
+              Video Editing<br />
+              
+            </h2>
+            <a href="/courses" class="button">About Us</a>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="images/faculties/Vee.jpeg" alt="" class="image" />
+          <div class="image-data">
+            <span class="text"></span>
+            <h2>
+              Music Production <br />
+              
+            </h2>
+            <a href="/courses" class="button">About Us</a>
+          </div>
+        </div>
+        <div class="slide swiper-slide">
+          <img src="images/faculties/Wasiu.jpeg" alt="" class="image" />
+          <div class="image-data">
+            <span class="text"></span>
+            <h2>
+              Digital Marketing <br />
+              
+            </h2>
+            <a href="/courses" class="button">About Us</a>
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="swiper-button-next nav-btn"></div>
+      <div class="swiper-button-prev nav-btn"></div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+
+    <section class="container_2  bg-violet-800 flex justify-between py-6 flex-col text-center text-white">
+        <div class="aside text-2xl sm:text-4xl py-3"> <i class="bi bi-alarm"></i> Start Your Journey Today</div>
+       
+        
+
+        <div class="email-content py-3">
+          <p>Register now to begin your tech journey!</p>
+
+          <div class="input-box my-12">
+             <a  href="https://Store.techuni.io"
+                    class=" bg-white text-violet-800 p-3 w-1/2 sm:w-36 rounded-md shadow-xl   text-center text-md"  target="_blank"> 
+                   Register</a> 
+           
+            
+          </div>
+        </div>
+      </section>
+
+      <!-- Coming soon section ends -->
 
          <!-- Services section starts -->
 
      
         <h2
-          class="mb-6 text-center text-3xl font-Alt font-bold text-violet-800 sm:text-4xl"
+          class="mb-6 text-center my-24 text-3xl  font-bold text-violet-800 sm:text-4xl"
         >
           <i class="bi bi-graduation-cap text-violet-800"></i> COURSES WE OFFER
         </h2>
@@ -360,6 +658,24 @@
   <script src="/js/particles.min.js"></script>
   <script src="/js/app.js"></script>
 
+ <!-- Swiper JS -->
+    <script src="JS/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   
 
        

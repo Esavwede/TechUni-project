@@ -21,6 +21,24 @@
     transform: translateX(5px);
   }
 
+   html {
+
+      overflow-x: hidden;
+  }
+
+  html::-webkit-scrollbar {
+      width: 0.8rem;
+  }
+
+  html::-webkit-scrollbar-track {
+      background: rgb(137, 130, 171);
+  }
+
+  html::-webkit-scrollbar-thumb {
+      background: #7e22ce;
+  }
+
+
   /**
          * Swiper 8.4.4
          * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -998,6 +1016,7 @@
 
     .intro {
       font-size: 40px;
+      
     }
   }
 }
