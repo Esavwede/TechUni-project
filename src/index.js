@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 mongoose.connect(
-  "mongodb+srv://alpha-admin:test1234@cluster1995.hcn4h.mongodb.net/blogDB",
+  process.env.PRODUCTION_DB_URI || process.env.DB_URI ,
   { useNewUrlParser: true }
 );
 
@@ -112,3 +112,4 @@ app.get("/faq", (req, res) => {
 app.listen(3000, function () {
   console.log("Server started on port 3000");
 });
+
