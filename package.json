@@ -4,7 +4,9 @@
   "description": "The TechUni Web Application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www",
+    "start:dev": "nodemon ./src/bin/www",
+    "test": "jest",
     "tailwind": "npx tailwindcss -i ./src/input.css -o ./public/css/output.css --watch"
   },
   "author": "Maurice Odo",
@@ -14,6 +16,7 @@
     "body-parser": "^1.20.2",
     "compression": "^1.7.4",
     "config": "^3.3.9",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.9",
