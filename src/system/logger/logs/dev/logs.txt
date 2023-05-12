@@ -84,3 +84,10 @@
 {"level":30,"time":"2023-05-12T12:53:32.111Z","pid":12616,"hostname":"DESKTOP-5M74V4B","msg":" Jobs Routes Built "}
 {"level":30,"time":"2023-05-12T12:53:32.111Z","pid":12616,"hostname":"DESKTOP-5M74V4B","msg":" Application Routes Built "}
 {"level":30,"time":"2023-05-12T12:53:32.153Z","pid":12616,"hostname":"DESKTOP-5M74V4B","msg":"Application Started "}
+{"level":30,"time":"2023-05-12T12:55:35.702Z","pid":9072,"hostname":"DESKTOP-5M74V4B","msg":"Building Application Routes "}
+{"level":30,"time":"2023-05-12T12:55:35.704Z","pid":9072,"hostname":"DESKTOP-5M74V4B","msg":" Building User Routes "}
+{"level":30,"time":"2023-05-12T12:55:35.704Z","pid":9072,"hostname":"DESKTOP-5M74V4B","msg":" User Routes Built "}
+{"level":30,"time":"2023-05-12T12:55:35.704Z","pid":9072,"hostname":"DESKTOP-5M74V4B","msg":" Building Jobs Routes "}
+{"level":30,"time":"2023-05-12T12:55:35.704Z","pid":9072,"hostname":"DESKTOP-5M74V4B","msg":" Jobs Routes Built "}
+{"level":30,"time":"2023-05-12T12:55:35.705Z","pid":9072,"hostname":"DESKTOP-5M74V4B","msg":" Application Routes Built "}
+{"level":30,"time":"2023-05-12T12:55:35.747Z","pid":9072,"hostname":"DESKTOP-5M74V4B","msg":"Application Started "}
