@@ -1,1 +1,44 @@
 {"level":30,"time":"2023-05-11T18:54:50.596Z","pid":2388,"hostname":"DESKTOP-H5I8ABE","msg":"Application Running "}
+{"level":30,"time":"2023-05-12T03:29:40.849Z","pid":14084,"hostname":"DESKTOP-H5I8ABE","msg":"Building Application Routes "}
+{"level":50,"time":"2023-05-12T03:29:40.851Z","pid":14084,"hostname":"DESKTOP-H5I8ABE","err":{"type":"TypeError","message":"userRoutes is not a function","stack":"TypeError: userRoutes is not a function\n    at buildRoutes (C:\\Users\\GAGA_D_DEVELOPER\\Desktop\\FREELANCE\\WORK\\TECH_UNI\\TechUni-project\\src\\routes\\index.js:13:13)\n    at Object.<anonymous> (C:\\Users\\GAGA_D_DEVELOPER\\Desktop\\FREELANCE\\WORK\\TECH_UNI\\TechUni-project\\src\\app.js:31:1)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)\n    at require (node:internal/modules/cjs/helpers:102:18)\n    at Object.<anonymous> (C:\\Users\\GAGA_D_DEVELOPER\\Desktop\\FREELANCE\\WORK\\TECH_UNI\\TechUni-project\\src\\bin\\www:7:11)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)"},"msg":"APPLICATION_ROUTES_BUILD_ERROR"}
+{"level":30,"time":"2023-05-12T03:29:40.890Z","pid":14084,"hostname":"DESKTOP-H5I8ABE","msg":"Application Started "}
+{"level":30,"time":"2023-05-12T03:30:26.758Z","pid":10916,"hostname":"DESKTOP-H5I8ABE","msg":"Building Application Routes "}
+{"level":50,"time":"2023-05-12T03:30:26.759Z","pid":10916,"hostname":"DESKTOP-H5I8ABE","err":{"type":"TypeError","message":"userRoutes is not a function","stack":"TypeError: userRoutes is not a function\n    at buildRoutes (C:\\Users\\GAGA_D_DEVELOPER\\Desktop\\FREELANCE\\WORK\\TECH_UNI\\TechUni-project\\src\\routes\\index.js:13:13)\n    at Object.<anonymous> (C:\\Users\\GAGA_D_DEVELOPER\\Desktop\\FREELANCE\\WORK\\TECH_UNI\\TechUni-project\\src\\app.js:31:1)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)\n    at require (node:internal/modules/cjs/helpers:102:18)\n    at Object.<anonymous> (C:\\Users\\GAGA_D_DEVELOPER\\Desktop\\FREELANCE\\WORK\\TECH_UNI\\TechUni-project\\src\\bin\\www:7:11)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)"},"msg":"APPLICATION_ROUTES_BUILD_ERROR"}
+{"level":30,"time":"2023-05-12T03:30:26.795Z","pid":10916,"hostname":"DESKTOP-H5I8ABE","msg":"Application Started "}
+{"level":30,"time":"2023-05-12T03:30:37.547Z","pid":6784,"hostname":"DESKTOP-H5I8ABE","msg":"Building Application Routes "}
+{"level":50,"time":"2023-05-12T03:30:37.548Z","pid":6784,"hostname":"DESKTOP-H5I8ABE","err":{"type":"TypeError","message":"userRoutes is not a function","stack":"TypeError: userRoutes is not a function\n    at buildRoutes (C:\\Users\\GAGA_D_DEVELOPER\\Desktop\\FREELANCE\\WORK\\TECH_UNI\\TechUni-project\\src\\routes\\index.js:13:13)\n    at Object.<anonymous> (C:\\Users\\GAGA_D_DEVELOPER\\Desktop\\FREELANCE\\WORK\\TECH_UNI\\TechUni-project\\src\\app.js:31:1)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1155:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)\n    at require (node:internal/modules/cjs/helpers:102:18)\n    at Object.<anonymous> (C:\\Users\\GAGA_D_DEVELOPER\\Desktop\\FREELANCE\\WORK\\TECH_UNI\\TechUni-project\\src\\bin\\www:7:11)\n    at Module._compile (node:internal/modules/cjs/loader:1103:14)"},"msg":"APPLICATION_ROUTES_BUILD_ERROR"}
+{"level":30,"time":"2023-05-12T03:30:37.587Z","pid":6784,"hostname":"DESKTOP-H5I8ABE","msg":"Application Started "}
+{"level":30,"time":"2023-05-12T03:31:21.204Z","pid":16420,"hostname":"DESKTOP-H5I8ABE","msg":"Building Application Routes "}
+{"level":30,"time":"2023-05-12T03:31:21.204Z","pid":16420,"hostname":"DESKTOP-H5I8ABE","msg":" Building Jobs Routes "}
+{"level":30,"time":"2023-05-12T03:31:21.216Z","pid":16420,"hostname":"DESKTOP-H5I8ABE","msg":" Building Jobs Routes "}
+{"level":30,"time":"2023-05-12T03:31:21.217Z","pid":16420,"hostname":"DESKTOP-H5I8ABE","msg":" Jobs Routes Built "}
+{"level":30,"time":"2023-05-12T03:31:21.217Z","pid":16420,"hostname":"DESKTOP-H5I8ABE","msg":" Application Routes Built "}
+{"level":30,"time":"2023-05-12T03:31:21.255Z","pid":16420,"hostname":"DESKTOP-H5I8ABE","msg":"Application Started "}
+{"level":30,"time":"2023-05-12T03:31:45.020Z","pid":16344,"hostname":"DESKTOP-H5I8ABE","msg":"Building Application Routes "}
+{"level":30,"time":"2023-05-12T03:31:45.021Z","pid":16344,"hostname":"DESKTOP-H5I8ABE","msg":" Building User Routes "}
+{"level":30,"time":"2023-05-12T03:31:45.021Z","pid":16344,"hostname":"DESKTOP-H5I8ABE","msg":" Jobs Routes Built "}
+{"level":30,"time":"2023-05-12T03:31:45.021Z","pid":16344,"hostname":"DESKTOP-H5I8ABE","msg":" Building Jobs Routes "}
+{"level":30,"time":"2023-05-12T03:31:45.021Z","pid":16344,"hostname":"DESKTOP-H5I8ABE","msg":" Jobs Routes Built "}
+{"level":30,"time":"2023-05-12T03:31:45.022Z","pid":16344,"hostname":"DESKTOP-H5I8ABE","msg":" Application Routes Built "}
+{"level":30,"time":"2023-05-12T03:31:45.052Z","pid":16344,"hostname":"DESKTOP-H5I8ABE","msg":"Application Started "}
+{"level":30,"time":"2023-05-12T03:31:48.555Z","pid":11600,"hostname":"DESKTOP-H5I8ABE","msg":"Building Application Routes "}
+{"level":30,"time":"2023-05-12T03:31:48.556Z","pid":11600,"hostname":"DESKTOP-H5I8ABE","msg":" Building User Routes "}
+{"level":30,"time":"2023-05-12T03:31:48.556Z","pid":11600,"hostname":"DESKTOP-H5I8ABE","msg":" Jobs Routes Built "}
+{"level":30,"time":"2023-05-12T03:31:48.556Z","pid":11600,"hostname":"DESKTOP-H5I8ABE","msg":" Building Jobs Routes "}
+{"level":30,"time":"2023-05-12T03:31:48.556Z","pid":11600,"hostname":"DESKTOP-H5I8ABE","msg":" Jobs Routes Built "}
+{"level":30,"time":"2023-05-12T03:31:48.556Z","pid":11600,"hostname":"DESKTOP-H5I8ABE","msg":" Application Routes Built "}
+{"level":30,"time":"2023-05-12T03:31:48.593Z","pid":11600,"hostname":"DESKTOP-H5I8ABE","msg":"Application Started "}
+{"level":30,"time":"2023-05-12T03:31:51.420Z","pid":14572,"hostname":"DESKTOP-H5I8ABE","msg":"Building Application Routes "}
+{"level":30,"time":"2023-05-12T03:31:51.420Z","pid":14572,"hostname":"DESKTOP-H5I8ABE","msg":" Building User Routes "}
+{"level":30,"time":"2023-05-12T03:31:51.421Z","pid":14572,"hostname":"DESKTOP-H5I8ABE","msg":" Jobs Routes Built "}
+{"level":30,"time":"2023-05-12T03:31:51.421Z","pid":14572,"hostname":"DESKTOP-H5I8ABE","msg":" Building Jobs Routes "}
+{"level":30,"time":"2023-05-12T03:31:51.421Z","pid":14572,"hostname":"DESKTOP-H5I8ABE","msg":" Jobs Routes Built "}
+{"level":30,"time":"2023-05-12T03:31:51.421Z","pid":14572,"hostname":"DESKTOP-H5I8ABE","msg":" Application Routes Built "}
+{"level":30,"time":"2023-05-12T03:31:51.462Z","pid":14572,"hostname":"DESKTOP-H5I8ABE","msg":"Application Started "}
+{"level":30,"time":"2023-05-12T03:32:24.959Z","pid":5252,"hostname":"DESKTOP-H5I8ABE","msg":"Building Application Routes "}
+{"level":30,"time":"2023-05-12T03:32:24.960Z","pid":5252,"hostname":"DESKTOP-H5I8ABE","msg":" Building User Routes "}
+{"level":30,"time":"2023-05-12T03:32:24.961Z","pid":5252,"hostname":"DESKTOP-H5I8ABE","msg":" User Routes Built "}
+{"level":30,"time":"2023-05-12T03:32:24.961Z","pid":5252,"hostname":"DESKTOP-H5I8ABE","msg":" Building Jobs Routes "}
+{"level":30,"time":"2023-05-12T03:32:24.962Z","pid":5252,"hostname":"DESKTOP-H5I8ABE","msg":" Jobs Routes Built "}
+{"level":30,"time":"2023-05-12T03:32:24.962Z","pid":5252,"hostname":"DESKTOP-H5I8ABE","msg":" Application Routes Built "}
+{"level":30,"time":"2023-05-12T03:32:25.005Z","pid":5252,"hostname":"DESKTOP-H5I8ABE","msg":"Application Started "}

@@ -7,7 +7,7 @@ var logger = require('./system/logger/index')
 
 
 // Routes 
-const buildRoutes = require('./system/logger/index') 
+const buildRoutes = require('./routes/index') 
 
 
 // Database 

@@ -1,7 +1,7 @@
 
 const express = require('express') 
 const router = express.Router() 
-const logger = require('../system/logger/index') 
+const logger = require('../../system/logger/index.js') 
 
 const job = require('../../controllers/Job/job.controller') 
 
