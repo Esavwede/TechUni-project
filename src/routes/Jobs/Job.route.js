@@ -16,6 +16,10 @@ module.exports = function(app)
 
         // Job Routes 
         router.post('/', job.create )
+        router.get('/', job.getJobs ) 
+        router.get('/:id', job.findOne ) 
+        router.patch('/:id', job.update ) 
+        router.delete('/:id', job.deleteOne ) 
 
 
 
