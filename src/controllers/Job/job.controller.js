@@ -7,13 +7,13 @@ const getComposeJobPage = async function(req, res, next)
             {
                 try 
                 {
-
+                    return res.render('compose') 
                 }
                 catch(e)
                 {
-
+                    return res.render('error',{error})
                 }
-}
+            }
 
 
 const create = async function(req, res, next)
@@ -99,7 +99,7 @@ const findOne = async function(req, res, next )
                     {
                         const id = req.params.id 
                         const job = await getJob(id)
-                        return res.json(job) 
+                        return res.render("post", job)
                     }
                     catch(e)
                     {

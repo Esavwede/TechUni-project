@@ -1,9 +1,5 @@
 
 
-
-Admin Details Already in the system 
-Admin Logs in , is authenticated 
-Admin can change password 
-Admin Uses authorization to work with jobs 
-
+Tasks 
+Jobs: Skip, Limit
 
