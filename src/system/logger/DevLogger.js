@@ -9,11 +9,11 @@ const devLogger = pino(
                [
                  { 
                     target: 'pino-pretty'
-                 },
-                 {
-                    target: 'pino/file', 
-                    options: { destination: `${ __dirname }/logs/dev/logs.txt`}
                  }
+               //   {
+               //      target: 'pino/file', 
+               //      options: { destination: `${ __dirname }/logs/dev/logs.txt`}
+               //   }
                ]
             },
             level: process.env.APPLICATION_LOG_LEVEL || 'info', 
