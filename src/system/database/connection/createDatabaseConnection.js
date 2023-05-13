@@ -22,7 +22,7 @@ function createDatabaseConnection()
 
             db.once('connected',()=>{
                 console.log(' Database Connection Created Successfully ') 
-                resolve() 
+                resolve( db ) 
             })
 
             db.on('error',(e)=>{

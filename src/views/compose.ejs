@@ -1,9 +1,9 @@
 <%- include("partials/secondary_header"); -%>
     <h1 class="m-5 text-violet-800">Compose Job Post</h1>
-    <form class="m-5" action="/compose" method="post">
+    <form class="m-5" action="/job" method="post">
       <div class="form-group">
         <label>Title :</label>
-        <input class="form-control my-3" type="text" name="postTitle">
+        <input class="form-control my-3" type="text" name="title">
         <label>Role :</label>
         <input class="form-control my-3" type="text" name="role">
         <label>Location :</label>
@@ -20,7 +20,7 @@
         <input class="form-control my-3" type="text" name="skills">
 
         <label>Job Description :</label>
-        <textarea class="form-control my-3" name="postBody" rows="5" cols="30"></textarea>
+        <textarea class="form-control my-3" name="content" rows="5" cols="30"></textarea>
       </div>
       <button class="btn btn-primary  mt-3 w-full" type="submit" name="button">Publish</button>
     </form>

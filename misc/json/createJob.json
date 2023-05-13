@@ -1,0 +1,11 @@
+
+{
+	        "title": "sample title",
+            "role": "job role",
+            "salary": "$1000", 
+            "qualification":"qualification",
+            "experience": "experience",
+            "responsibilities": "responsibilities",
+            "skills": "skills skills",
+            "content": "content here"
+}

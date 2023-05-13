@@ -31,7 +31,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 buildRoutes(app) 
 
 // Database 
-createDatabaseConnection() 
+const db = createDatabaseConnection() 
 
 
 
@@ -41,6 +41,8 @@ createDatabaseConnection()
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -55,5 +57,26 @@ app.use(function(err, req, res, next) {
 
 
 logger.info('Application Started ') 
+
+
+// App Crash Settings 
+
+process.on('SIGINT',()=>
+    { 
+        db.close(false,()=>{ 
+          process.exit(0) 
+        })
+    }
+  )
+
+
+process.on('SIGTERM',()=>
+  {
+    db.close(false,()=>{ 
+      process.exit(0) 
+    })
+  }
+)
+
 
 module.exports = app;
