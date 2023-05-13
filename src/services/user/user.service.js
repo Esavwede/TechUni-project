@@ -8,6 +8,7 @@ const jwt = require('jsonwebtoken')
 
 
 
+
 const signinUser = function( userData )
         {
             return new Promise( async(resolve, reject)=>{
@@ -15,6 +16,10 @@ const signinUser = function( userData )
                 {
                     const user = await User.findOne({ email: userData.email })
 
+                    console.log(' Found User => ')
+                    console.log( user ) 
+
+                    
                     if( !user )
                     {
                         const userInputError = new Error("USER_INPUT_ERROR: Check Input ")
@@ -22,6 +27,7 @@ const signinUser = function( userData )
                         reject(userInputError) 
                     }
 
+                    
                    const passwordValid = await bcrypt.compare( userData.password, user.password )
                    
 
