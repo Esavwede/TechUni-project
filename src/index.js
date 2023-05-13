@@ -31,6 +31,7 @@ const postsSchema = {
 
 const Post = mongoose.model("Post", postsSchema);
 
+// done 
 app.get("/jobs", function (req, res) {
   Post.find({})
     .then(function (posts) {
@@ -41,10 +42,12 @@ app.get("/jobs", function (req, res) {
     });
 });
 
+// done 
 app.get("/compose", function (req, res) {
   res.render("compose");
 });
 
+// done 
 app.post("/compose", function (req, res) {
   const post = new Post({
     title: req.body.postTitle,
@@ -67,6 +70,8 @@ app.post("/compose", function (req, res) {
     });
 });
 
+
+// done 
 app.get("/posts/:postId", function (req, res) {
   const requestedPostId = req.params.postId;
 
@@ -85,29 +90,41 @@ app.get("/posts/:postId", function (req, res) {
   });
 });
 
+
+// done 
 app.get("/", (req, res) => {
   res.render("index");
 });
 
+
+// done 
 app.get("/courses", (req, res) => {
   res.render("courses");
 });
 
+// done 
 app.get("/faculties", (req, res) => {
   res.render("faculties");
 });
 
+
+// done 
 app.get("/students", (req, res) => {
   res.render("students");
 });
 
+
+// done 
 app.get("/jobs", (req, res) => {
   res.render("jobs");
 });
 
+// done 
 app.get("/faq", (req, res) => {
   res.render("faq");
 });
+
+
 
 app.listen(3000, function () {
   console.log("Server started on port 3000");

@@ -2,6 +2,8 @@
 const logger = require('../system/logger/index') 
 const jobRoutes = require('./Jobs/Job.route') 
 const userRoutes = require('./user/user.route.js') 
+const indexRoutes = require('./index/index.route') 
+
 
 module.exports = function buildRoutes(app)
         {
@@ -10,6 +12,7 @@ module.exports = function buildRoutes(app)
             logger.info('Building Application Routes ')
 
 
+            indexRoutes(app) 
             userRoutes(app) 
             jobRoutes(app)
 
