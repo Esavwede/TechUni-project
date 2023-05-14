@@ -41,7 +41,7 @@ const signin = async function(req, res, next)
             {
                 case 500: 
                         logger.error(' SIGNIN_ERROR  ') 
-                        return res.render("error",e) 
+                        return res.render("error") 
 
                 case 400: 
                         logger.error('SIGNIN_ERROR: => INVALID_USER_INPUT: 400')

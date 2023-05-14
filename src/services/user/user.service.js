@@ -8,6 +8,7 @@ const jwt = require('jsonwebtoken')
 
 
 
+
 const signinUser = function( userData )
         {
             return new Promise( async(resolve, reject)=>{
@@ -15,6 +16,9 @@ const signinUser = function( userData )
                 {
                     const user = await User.findOne({ email: userData.email })
 
+                    console.log( user ) 
+
+                    
                     if( !user )
                     {
                         const userInputError = new Error("USER_INPUT_ERROR: Check Input ")
