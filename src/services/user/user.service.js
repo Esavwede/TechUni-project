@@ -16,6 +16,7 @@ const signinUser = function( userData )
                 {
                     const user = await User.findOne({ email: userData.email })
 
+                    console.log(' Found User => ')
                     console.log( user ) 
 
                     
@@ -26,6 +27,7 @@ const signinUser = function( userData )
                         reject(userInputError) 
                     }
 
+                    
                    const passwordValid = await bcrypt.compare( userData.password, user.password )
                    
 
