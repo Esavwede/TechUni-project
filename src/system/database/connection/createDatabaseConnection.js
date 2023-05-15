@@ -6,6 +6,8 @@ const mongoose = require('mongoose')
 const DB_URI = process.env.DB_URI 
 const DB_OPTIONS = { useNewUrlParser: true, }
 
+console.log(DB_URI);
+
 
 function createDatabaseConnection()
 {
