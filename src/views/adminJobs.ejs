@@ -1,13 +1,16 @@
 <%- include("partials/primary_header"); -%>
  <title>TechUni : Jobs</title>
 
-<h1 class="font-bold text-violet-800 text-center text-3xl my-12">APPLY TO JOBS</h1>
+<h1 class="font-bold text-violet-800 text-center text-3xl my-12">ADMIN PREVIEW PAGE</h1>
 
 <% posts.forEach(function(post){ %>
 
 <ul class="mx-auto my-12 flex list-none flex-col items-center justify-between align-middle gap-8 lg:flex-row lg:text-2xl sm:text-base">
   <li  class="flex mx-3 w-full flex-col items-start py-6 px-4 shadow-xl sm:mx-auto bg-papayawhip-light text-violet-800 sm:w-1/2 sm:text-base">
-    
+    <div class="flex align-middle justify-between items-center">
+       <input class="bg-violet-800 p-3 text-white rounded-md cursor-pointer mx-3" type="submit" value="Edit">
+       <input class="bg-violet-800 p-3 text-white rounded-md cursor-pointer" type="submit" value="Delete">
+    </div>
    
     <h1 class="text-2xl my-3"><%=post.title%></h1>
 
