@@ -3,6 +3,7 @@ const logger = require('../../system/logger/index')
 const { createJob, getJobsService, getJob, deleteJob, updateJob} = require('../../services/Job/job.service') 
 
 
+
 const getComposeJobPage = async function(req, res, next)
             {
                 try 
@@ -16,6 +17,7 @@ const getComposeJobPage = async function(req, res, next)
             }
 
 
+
 const create = async function(req, res, next)
         {
             try 
@@ -24,7 +26,7 @@ const create = async function(req, res, next)
                 // validate req 
                  await createJob(req.body) 
 
-                 return res.send(' New Job Created ! ')
+                 return res.redirect('Jobs')
 
             }
             catch(e)
@@ -58,12 +60,17 @@ const getJobs = async function(req, res, next )
                 {
                     try 
                     {
+                       
                        const numberOfJobsPerPage = 10
                        const numberOfJobsToSkip = 0
 
+
+                       console.log(' Getting Jobs ') 
+
                        const jobs = await getJobsService(numberOfJobsPerPage, numberOfJobsToSkip ) 
-                       return res.json( jobs ) 
-        
+                       console.log(jobs)
+                       return res.render('')
+                        
                     }
                     catch(e)
                     {
@@ -99,11 +106,13 @@ const findOne = async function(req, res, next )
                     {
                         const id = req.params.id 
                         const job = await getJob(id)
-                        return res.render("post", job)
+                        console.log(' Triple Here ')
+                        return res.render("post",{ job }) 
                     }
                     catch(e)
                     {
                     
+                        console.log(e) 
                         const statusCode = e.statusCode 
         
         
@@ -112,6 +121,7 @@ const findOne = async function(req, res, next )
                             case 500: 
                                     logger.error('JOB_CONTROLLER_ERROR: => FIND_JOB ') 
                                     logger.error(' Server encountered error while finding Job ')
+                                    logger.error(e,'here')
                                     return res.send(' Server Error ') 
         
                             case 400: 
@@ -119,7 +129,8 @@ const findOne = async function(req, res, next )
                                     return res.send(' Invalid User input ') 
         
                             default: 
-                                      logger.error(' Unknown Response Error Code at: FIND_JOBS_CONTROLLER  ') 
+                                      console.log(e) 
+                                      logger.error(' Unknown Response Error Code at: FIND_JOB_CONTROLLER  ') 
                                       return res.send(' Server Error: Could not find response ') 
         
         

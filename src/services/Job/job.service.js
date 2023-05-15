@@ -46,23 +46,26 @@ const Job = require('../../model/Job.model')
             })
         }
 
+
         const getJob = function(_id)
         {
             return new Promise( async(resolve, reject)=>{
                 try 
                 {
                     const job =  await Job.findOne({ _id })
-                    resolve(job) 
-                }
+                    console.log( job ) 
+                    resolve(job)
+                } 
                 catch(e)
                 {
                     logger.error(e,'JOB_SERVICE_ERROR: COULD NOT GET JOB WITH ID ' + _id ) 
-                    e.statusCode = 500 
+                    e.statusCode = 500
                     reject(e) 
                 }
             })
         }
 
+        
         const updateJob = function( _id, update )
         {
             return new Promise( async(resolve, reject)=>{

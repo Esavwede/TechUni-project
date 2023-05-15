@@ -25,11 +25,12 @@ const getHomePage = function(req, res, next)
                 return res.render("courses") 
             }
             catch(e)
-            {
+            {   
                 console.log('Error occured while getting Courses page ')
                 return res.render("error",e) 
             }
         }
+
 
         const getFacultiesPage = function(req, res, next)
         {
@@ -44,6 +45,7 @@ const getHomePage = function(req, res, next)
                 return res.render("error",e) 
             }
         }
+
 
 
         const getStudentsPage = function(req, res, next)
@@ -84,6 +86,7 @@ const getHomePage = function(req, res, next)
                 const numberOfJobsPerPage = 7
                 const numberOfJobsToSkip = 0 
                 const posts = await getJobsService(numberOfJobsPerPage, numberOfJobsToSkip)
+                console.log( posts[0]._id )
                 return res.render("jobs",{ posts }) 
             }
             catch(e)

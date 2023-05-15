@@ -7,8 +7,6 @@ const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken') 
 
 
-
-
 const signinUser = function( userData )
         {
             return new Promise( async(resolve, reject)=>{
@@ -27,7 +25,7 @@ const signinUser = function( userData )
                         reject(userInputError) 
                     }
 
-                    
+
                    const passwordValid = await bcrypt.compare( userData.password, user.password )
                    
 
@@ -56,4 +54,6 @@ const signinUser = function( userData )
             })
         }
 
+
+        
 module.exports = { signinUser } 
