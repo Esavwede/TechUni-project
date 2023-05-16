@@ -19,8 +19,8 @@ module.exports = function(app)
         // Job Routes 
         router.get('/compose', job.getComposeJobPage )
         router.post('/', validateAccess , job.create )
-        router.get('/', validateAccess , job.getJobs ) 
-        router.get('/:id', validateAccess ,job.findOne ) 
+        router.get('/',  job.getJobs ) 
+        router.get('/:id', job.findOne ) 
         router.patch('/:id', validateAccess , job.update ) 
         router.delete('/:id', validateAccess ,job.deleteOne ) 
 
