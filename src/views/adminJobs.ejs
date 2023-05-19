@@ -3,6 +3,50 @@
 
 <h1 class="font-bold text-violet-800 text-center text-3xl my-12">ADMIN PREVIEW PAGE</h1>
 
+
+ <script>
+
+  async function deletePost()
+  {
+    try 
+    {
+      
+      window.alert(' Show a deleting Icon ') 
+
+          //additional data
+          const myDataObject = { post_id: 1 };
+
+          const deleteData = async ( ) =>{
+            const response = await fetch("", {
+                method: 'DELETE', 
+                headers: {
+                  'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(myDataObject)
+            });
+
+            const data = await response.json( );
+
+            // now do whatever you want with the data  
+            console.log(data);
+            console.log(' Post Deleted ')
+          };
+          deleteData( );
+
+
+    }
+    catch(e)
+    {
+      console.log(' error occured while deleting post ') 
+      console.log(e) 
+    }
+  }
+
+
+ </script>
+
+
+
 <% posts.forEach(function(post){ %>
 
 <ul class="mx-auto my-12 flex list-none flex-col items-center justify-between align-middle gap-8 lg:flex-row lg:text-2xl sm:text-base">

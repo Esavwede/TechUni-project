@@ -211,5 +211,31 @@ const update = async function(req, res, next )
 }
 
 
+const getAdminJobs = async function(req, res, next )
+                {
+                    try 
+                    {
+                       
+                       const numberOfJobsPerPage = 10
+                       const numberOfJobsToSkip = 0
 
-module.exports = { getComposeJobPage, create, getJobs,  findOne, update, deleteOne  }
+
+                       console.log(' Getting Jobs ') 
+
+                       const posts = await getJobsService(numberOfJobsPerPage, numberOfJobsToSkip ) 
+                       
+                      
+                       return res.render('adminJobs',{ posts })
+                        
+                    }
+                    catch(e)
+                    {
+                        console.log(' Server Encountered error while rendering Admin Jobs Page ') 
+                        console.log(e) 
+                    }
+                }
+
+
+
+
+module.exports = { getComposeJobPage, create, getJobs,  findOne, update, deleteOne, getAdminJobs  }
