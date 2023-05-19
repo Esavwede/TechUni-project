@@ -21,3 +21,21 @@
 {"level":50,"time":"2023-05-13T23:56:22.802Z","pid":10056,"hostname":"DESKTOP-5M74V4B","msg":" SIGNIN_ERROR  "}
 {"level":50,"time":"2023-05-13T23:56:44.797Z","pid":10056,"hostname":"DESKTOP-5M74V4B","err":{"type":"Error","message":"secretOrPrivateKey must have a value","stack":"Error: secretOrPrivateKey must have a value\n    at module.exports [as sign] (C:\\Users\\DELL\\Desktop\\TechUni-project\\node_modules\\jsonwebtoken\\sign.js:105:20)\n    at C:\\Users\\DELL\\Desktop\\TechUni-project\\src\\services\\user\\user.service.js:45:39"},"msg":"USER_SERVICE_ERROR: Could not Signin User "}
 {"level":50,"time":"2023-05-13T23:56:44.797Z","pid":10056,"hostname":"DESKTOP-5M74V4B","msg":" SIGNIN_ERROR  "}
+{"level":30,"time":"2023-05-19T09:19:48.499Z","pid":15444,"hostname":"DESKTOP-5M74V4B","msg":"Building Application Routes "}
+{"level":30,"time":"2023-05-19T09:19:48.500Z","pid":15444,"hostname":"DESKTOP-5M74V4B","msg":" Building User Routes "}
+{"level":30,"time":"2023-05-19T09:19:48.501Z","pid":15444,"hostname":"DESKTOP-5M74V4B","msg":" Main Application Routes Built "}
+{"level":30,"time":"2023-05-19T09:19:48.501Z","pid":15444,"hostname":"DESKTOP-5M74V4B","msg":" Building User Routes "}
+{"level":30,"time":"2023-05-19T09:19:48.501Z","pid":15444,"hostname":"DESKTOP-5M74V4B","msg":" User Routes Built "}
+{"level":30,"time":"2023-05-19T09:19:48.501Z","pid":15444,"hostname":"DESKTOP-5M74V4B","msg":" Building Jobs Routes "}
+{"level":30,"time":"2023-05-19T09:19:48.502Z","pid":15444,"hostname":"DESKTOP-5M74V4B","msg":" Jobs Routes Built "}
+{"level":30,"time":"2023-05-19T09:19:48.502Z","pid":15444,"hostname":"DESKTOP-5M74V4B","msg":" Application Routes Built "}
+{"level":30,"time":"2023-05-19T09:19:48.551Z","pid":15444,"hostname":"DESKTOP-5M74V4B","msg":"Application Started "}
+{"level":30,"time":"2023-05-19T13:13:08.485Z","pid":13648,"hostname":"DESKTOP-5M74V4B","msg":"Building Application Routes "}
+{"level":30,"time":"2023-05-19T13:13:08.486Z","pid":13648,"hostname":"DESKTOP-5M74V4B","msg":" Building User Routes "}
+{"level":30,"time":"2023-05-19T13:13:08.486Z","pid":13648,"hostname":"DESKTOP-5M74V4B","msg":" Main Application Routes Built "}
+{"level":30,"time":"2023-05-19T13:13:08.486Z","pid":13648,"hostname":"DESKTOP-5M74V4B","msg":" Building User Routes "}
+{"level":30,"time":"2023-05-19T13:13:08.487Z","pid":13648,"hostname":"DESKTOP-5M74V4B","msg":" User Routes Built "}
+{"level":30,"time":"2023-05-19T13:13:08.487Z","pid":13648,"hostname":"DESKTOP-5M74V4B","msg":" Building Jobs Routes "}
+{"level":30,"time":"2023-05-19T13:13:08.488Z","pid":13648,"hostname":"DESKTOP-5M74V4B","msg":" Jobs Routes Built "}
+{"level":30,"time":"2023-05-19T13:13:08.488Z","pid":13648,"hostname":"DESKTOP-5M74V4B","msg":" Application Routes Built "}
+{"level":30,"time":"2023-05-19T13:13:08.510Z","pid":13648,"hostname":"DESKTOP-5M74V4B","msg":"Application Started "}

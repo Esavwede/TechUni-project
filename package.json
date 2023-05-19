@@ -2,7 +2,7 @@
   "name": "techuni-project",
   "version": "1.0.0",
   "description": "The TechUni Web Application",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "node ./bin/www",
     "start:dev": "nodemon ./src/bin/www",
