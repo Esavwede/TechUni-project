@@ -69,7 +69,7 @@ const getJobs = async function(req, res, next )
 
                        const jobs = await getJobsService(numberOfJobsPerPage, numberOfJobsToSkip ) 
                        console.log(jobs)
-                       return res.render('')
+                       return res.render('posts', jobs )
                         
                     }
                     catch(e)
