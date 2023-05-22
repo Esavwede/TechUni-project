@@ -28,6 +28,7 @@ const Job = require('../../model/Job.model')
         })
         }
 
+        
         const getJobsService = function( numberOfJobsPerPage, numberOfJobsToSkip)
         {
             return new Promise(async(resolve, reject)=>{

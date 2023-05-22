@@ -3,36 +3,45 @@
 
 <h1 class="font-bold text-violet-800 text-center text-3xl my-12">APPLY TO JOBS</h1>
 
-<% posts.forEach(function(post){ %>
+<% if( posts.length > 0 ) {  %>
 
-<ul class="mx-auto my-12 flex list-none flex-col items-center justify-between align-middle gap-8 lg:flex-row lg:text-2xl sm:text-base">
-  <li  class="flex mx-3 w-full flex-col items-start py-6 px-4 shadow-xl sm:mx-auto bg-papayawhip-light text-violet-800 sm:w-1/2 sm:text-base">
-    
-   
-    <h1 class="text-2xl my-3"><%=post.title%></h1>
+  <% posts.forEach(function(post){ %>
 
-      <p class="my-2">Job role: <%=post.role%></p>
-      <p class="my-2">Location: <%=post.location%></p>
-      <p class="my-2"> Salary: <%=post.salary%></p>
-      <p class="my-2"> Qualification: <%=post.qualification%></p>
-      <p class="my-2">Experience: <%=post.experience%></p>
-      <p class="my-2"> Responsibilities: <%=post.responsibilities%></p>
-      <p class="my-2">Skills: <%=post.skills%></p>
-      <p class="my-2"> Description: 
-        <%=post.content.substring(0, 100) + " ..."%>
-
+    <ul class="mx-auto my-12 flex list-none flex-col items-center justify-between align-middle gap-8 lg:flex-row lg:text-2xl sm:text-base">
+      <li  class="flex mx-3 w-full flex-col items-start py-6 px-4 shadow-xl sm:mx-auto bg-papayawhip-light text-violet-800 sm:w-1/2 sm:text-base">
+        
        
-      </p>
-       <a class=" w-full sm:w-1/2 text-center rounded-xl p-3 my-3 bg-violet-800 text-white" href="/job/<%=post._id%>">Read More</a>
+        <h1 class="text-2xl my-3"><%=post.title%></h1>
+    
+          <p class="my-2">Job role: <%=post.role%></p>
+          <p class="my-2">Location: <%=post.location%></p>
+          <p class="my-2"> Salary: <%=post.salary%></p>
+          <p class="my-2"> Qualification: <%=post.qualification%></p>
+          <p class="my-2">Experience: <%=post.experience%></p>
+          <p class="my-2"> Responsibilities: <%=post.responsibilities%></p>
+          <p class="my-2">Skills: <%=post.skills%></p>
+          <p class="my-2"> Description: 
+            <%=post.content.substring(0, 100) + " ..."%>
+    
+           
+          </p>
+           <a class=" w-full sm:w-1/2 text-center rounded-xl p-3 my-3 bg-violet-800 text-white" href="/job/<%=post._id%>">Read More</a>
+    
+      </li>
+    </ul>
+    
+     
+        <a href="#" class="back-to-top d-flex  align-items-center justify-content-center"><i
+                class="fas fa-arrow-circle-up"></i></a>
+    
+    <script src="js/preload.js"></script>
+    
+    
+    <% }) %>
+    
 
-  </li>
-</ul>
+<% } else {  %> 
 
- 
-    <a href="#" class="back-to-top d-flex  align-items-center justify-content-center"><i
-            class="fas fa-arrow-circle-up"></i></a>
+  <h1> No Jobs At this time </h1>
 
-<script src="js/preload.js"></script>
-
-
-<% }) %>
+<% } %> 
