@@ -48,11 +48,12 @@ const Job = require('../../model/Job.model')
         }
 
 
-        const getJob = function(_id)
+        const getJob = function( _id )
         {
             return new Promise( async(resolve, reject)=>{
                 try 
                 {
+                    logger.info('GET_JOB_CONTROLLER')
                     const job =  await Job.findOne({ _id })
                     console.log( job ) 
                     resolve(job)

@@ -12,6 +12,8 @@ const signinUser = function( userData )
             return new Promise( async(resolve, reject)=>{
                 try 
                 {
+                    logger.info('Posted User Login Data ')
+                    logger.info( userData )
                     const user = await User.findOne({ email: userData.email })
 
                     console.log(' Found User => ')
