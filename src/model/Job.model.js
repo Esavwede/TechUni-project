@@ -26,26 +26,7 @@ const JobSchema = new Schema
                 type: String, 
                 required: true 
             },
-            qualification: 
-            {
-                type: String, 
-                required: true 
-            },
-            experience: 
-            {
-                type: String, 
-                required: true 
-            },
-            responsibilities: 
-            {
-                type: String, 
-                required: true 
-            },
-            skills:
-            {
-                type: String, 
-                required: true 
-            },
+           
             content: 
             {
                 type: String, 
