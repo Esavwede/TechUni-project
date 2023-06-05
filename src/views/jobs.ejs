@@ -16,15 +16,13 @@
           <p class="my-2">Job role: <%=post.role%></p>
           <p class="my-2">Location: <%=post.location%></p>
           <p class="my-2"> Salary: <%=post.salary%></p>
-          <p class="my-2"> Qualification: <%=post.qualification%></p>
-          <p class="my-2">Experience: <%=post.experience%></p>
-          <p class="my-2"> Responsibilities: <%=post.responsibilities%></p>
-          <p class="my-2">Skills: <%=post.skills%></p>
+          
           <p class="my-2"> Description: 
             <%=post.content.substring(0, 100) + " ..."%>
     
            
           </p>
+           <a href="<%=post.link%>">Go to Job</a>
         
            <a class=" w-full sm:w-1/2 text-center rounded-xl p-3 my-3 bg-violet-800 text-white" href="/job/<%=post._id%>">Read More</a>
     
