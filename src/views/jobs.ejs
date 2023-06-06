@@ -16,7 +16,9 @@
           <p class="my-2">Job role: <%=post.role%></p>
           <p class="my-2">Location: <%=post.location%></p>
           <p class="my-2"> Salary: <%=post.salary%></p>
-          
+          <p class="my-2"><a target="_blank" href="<%=post.link%>" 
+            style=" border: 2px solid rgb(32, 104, 239);
+            color: green; padding: 5px; border-radius: 4px; "> Apply </a> </p>
           <p class="my-2"> Description: 
             <%=post.content.substring(0, 100) + " ..."%>
     
@@ -33,6 +35,11 @@
         <a href="#" class="back-to-top d-flex  align-items-center justify-content-center"><i
                 class="fas fa-arrow-circle-up"></i></a>
     
+
+<div id="nav-buttons">
+  <button>Back</button>
+  <button>Next</button>
+</div>
     <script src="js/preload.js"></script>
     
     

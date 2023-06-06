@@ -42,7 +42,7 @@ const signinUser = function( userData )
 
                     const { _id, firstname, email } = user 
                     const tokenData = { _id, firstname, email } 
-                    const token = jwt.sign( tokenData, process.env.JWT_SECRET,{ expiresIn: '30m' } )
+                    const token = jwt.sign( tokenData, process.env.JWT_SECRET,{ expiresIn: '60m' } )
 
                     resolve(token) 
 
