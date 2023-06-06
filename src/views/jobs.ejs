@@ -1,53 +1,162 @@
 <%- include("partials/primary_header"); -%>
- <title>TechUni : Jobs</title>
+
+<title>TechUni : Jobs</title>
 
 <h1 class="font-bold text-violet-800 text-center text-3xl my-12">APPLY TO JOBS</h1>
 
-<% if( posts.length > 0 ) {  %>
 
-  <% posts.forEach(function(post){ %>
+<script>
 
-    <ul class="mx-auto my-12 flex list-none flex-col items-center justify-between align-middle gap-8 lg:flex-row lg:text-2xl sm:text-base">
-      <li  class="flex mx-3 w-full flex-col items-start py-6 px-4 shadow-xl sm:mx-auto bg-papayawhip-light text-violet-800 sm:w-1/2 sm:text-base">
+  window.alert('Working')
+
+  function createListItem()
+  {
+    try 
+    {
+        
+        // Create a new li element
+        const listItem = document.createElement('li');
+
+        // Add the specified classes to the li element
+        listItem.classList.add(
+          'flex',
+          'mx-3',
+          'w-full',
+          'flex-col',
+          'items-start',
+          'py-6',
+          'px-4',
+          'shadow-xl',
+          'sm:mx-auto',
+          'bg-papayawhip-light',
+          'text-violet-800',
+          'sm:w-1/2',
+          'sm:text-base'
+        );
+
+        return listItem 
+    }
+    catch(e)
+    {
+      console.log('Error occured while creating Jobs List Item ')
+      console.log(e) 
+    }
+  }
+
+
+  function createListItemHeader()
+  {
+    try 
+    {
+        // Create a new h1 element
+        const heading = document.createElement('h1');
+
+        // Add the specified classes to the h1 element
+        heading.classList.add('text-2xl', 'my-3');
+
+        return heading
+    }
+    catch(e)
+    {
+      console.log(' Error occured while creating list item header ')
+      console.log(e) 
+    }
+  }
+
+  function createJobRoleElement()
+  {
+    try 
+    {
+        const jobRole = document.createElement('p')
+        jobRole.classList.add('my-2')
+    }
+    catch(e)
+    {
+        console.log(' Error occured while creating Job role Element ')
+        console.log(e) 
+    }
+  }
+
+
+  function createJobLocationElement()
+  {
+    try 
+    {
+        const jobLocationElement = document.createElement('p')
+        jobLocationElement.classList.add('my-2')
+        return jobLocationElement 
+    }
+    catch(e)
+    {
+        console.log(' Error occured while creating Job Location Element ')
+        console.log(e) 
+    }
+  }
+
+
+  function createJobSalaryElement()
+  {
+    try 
+    {
+        const jobSalaryElement = document.createElement('p')
+        jobSalaryElement.classList.add('my-2') 
+        return jobSalaryElement 
+    }
+    catch(e)
+    {
+        console.log(' Error occured while creating job salary Element ')
+        console.log(e) 
+    }
+  }
+  
+
+  function createJobLinkElement()
+  {
+    try 
+    {
+      <p class="my-2"><a target="_blank" href="<%=post.link%>" 
+      style=" border: 2px solid rgb(32, 104, 239);
+      color: green; padding: 5px; border-radius: 4px; "> Apply </a> </p>
+        const jobLink = document.createElement('a') 
+        jobLink.classList.add('my-2') 
+        
+
+    }
+    catch(e)
+    {
+      console.log(' Error occured while creating Job Link Element ')
+      console.log(e) 
+    }
+  }
+
+
+</script>
+
+
+<ul class="mx-auto my-12 flex list-none flex-col items-center justify-between align-middle gap-8 lg:flex-row lg:text-2xl sm:text-base">
+
+</ul>
+
+
+
+<li  class="flex mx-3 w-full flex-col items-start py-6 px-4 shadow-xl sm:mx-auto bg-papayawhip-light text-violet-800 sm:w-1/2 sm:text-base">
         
        
-        <h1 class="text-2xl my-3"><%=post.title%></h1>
-    
-          <p class="my-2">Job role: <%=post.role%></p>
-          <p class="my-2">Location: <%=post.location%></p>
-          <p class="my-2"> Salary: <%=post.salary%></p>
-          <p class="my-2"><a target="_blank" href="<%=post.link%>" 
-            style=" border: 2px solid rgb(32, 104, 239);
-            color: green; padding: 5px; border-radius: 4px; "> Apply </a> </p>
-          <p class="my-2"> Description: 
-            <%=post.content.substring(0, 100) + " ..."%>
-    
-           
-          </p>
-           <a id="<%=post.link%>">Go to Job</a>
-        
-           <a class=" w-full sm:w-1/2 text-center rounded-xl p-3 my-3 bg-violet-800 text-white" href="/job/<%=post._id%>">Read More</a>
-    
-      </li>
-    </ul>
-    
+  <h1 class="text-2xl my-3"><%=post.title%></h1>
+
+    <p class="my-2">Job role: <%=post.role%></p>
+    <p class="my-2">Location: <%=post.location%></p>
+    <p class="my-2"> Salary: <%=post.salary%></p>
+    <p class="my-2"><a target="_blank" href="<%=post.link%>" 
+      style=" border: 2px solid rgb(32, 104, 239);
+      color: green; padding: 5px; border-radius: 4px; "> Apply </a> </p>
+    <p class="my-2"> Description: 
+      <%=post.content.substring(0, 100) + " ..."%>
+
      
-        <a href="#" class="back-to-top d-flex  align-items-center justify-content-center"><i
-                class="fas fa-arrow-circle-up"></i></a>
-    
+    </p>
+     <a id="<%=post.link%>">Go to Job</a>
+  
+     <a class=" w-full sm:w-1/2 text-center rounded-xl p-3 my-3 bg-violet-800 text-white" href="/job/<%=post._id%>">Read More</a>
 
-<div id="nav-buttons">
-  <button>Back</button>
-  <button>Next</button>
-</div>
-    <script src="js/preload.js"></script>
-    
-    
-    <% }) %>
-    
-
-<% } else {  %> 
-
-  <h1> No Jobs At this time </h1>
-
-<% } %> 
+</li>
