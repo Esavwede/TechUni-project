@@ -73,7 +73,10 @@ const Job = require('../../model/Job.model')
             return new Promise( async(resolve, reject)=>{
                 try 
                 {
+                    console.log(' JOB_UPDATE_SERVICE: UPDATING JOB ')
+                    console.log( update )
                     const updated = await Job.updateOne({ _id }, update )
+                    console.log(' JOB_UPDATE_SERVICE: JOB UPDATED ')
                     console.log( updated )
                     resolve() 
                 }

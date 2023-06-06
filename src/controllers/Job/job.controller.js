@@ -3,6 +3,7 @@ const logger = require('../../system/logger/index')
 const { createJob, getJobsService, getJob, deleteJob, updateJob} = require('../../services/Job/job.service') 
 
 
+
 const getComposeJobPage = async function(req, res, next)
             {
                 try 
@@ -25,7 +26,7 @@ const create = async function(req, res, next)
             {
                 
                 // validate req 
-                logger.info(' In create job route ') 
+                 logger.info(' In create job route ') 
                  await createJob(req.body) 
 
                  return res.redirect('Jobs')
@@ -41,7 +42,7 @@ const create = async function(req, res, next)
                 {
                     case 500: 
                             logger.error(e,'JOB_CONTROLLER_ERROR: => CREATE_JOB ') 
-                            return res.send(' Server Error ') 
+                            return res.render("error")
 
                     case 400: 
                             logger.error(e,'CREATE_JOB_ERROR: => INVALID_USER_INPUT: 400')
@@ -49,7 +50,7 @@ const create = async function(req, res, next)
 
                     default: 
                               logger.error(e,' Unknown Response Error Code ') 
-                              return res.send(' Server Error: Could not find response ') 
+                              return res.render("error")
 
 
                 }
@@ -86,7 +87,7 @@ const getJobs = async function(req, res, next )
                             case 500: 
                                     logger.error(e,'JOB_CONTROLLER_ERROR: => FIND_JOBS ') 
                                     logger.error(' Server encountered error while finding jobs ')
-                                    return res.send(' Server Error ') 
+                                    return res.render("error")
         
                             case 400: 
                                     logger.error(e,'CREATE_JOB_ERROR: => INVALID_USER_INPUT: 400')
@@ -94,7 +95,7 @@ const getJobs = async function(req, res, next )
         
                             default: 
                                       logger.error(e,' Unknown Response Error Code at: FIND_JOBS_CONTROLLER  ') 
-                                      return res.send(' Server Error: Could not find response ') 
+                                      return res.render("error")
         
         
                         }
@@ -125,7 +126,7 @@ const findOne = async function(req, res, next )
                             case 500: 
                                     logger.error('JOB_CONTROLLER_ERROR: => FIND_JOB ') 
                                     logger.error(e,' Server encountered error while finding Job ')
-                                    return res.send(' Server Error ') 
+                                    return res.render("error") 
         
                             case 400: 
                                     logger.error(e,'CREATE_JOB_ERROR: => INVALID_USER_INPUT: 400')
@@ -134,7 +135,7 @@ const findOne = async function(req, res, next )
                             default: 
                                       
                                       logger.error(e,' Unknown Response Error Code at: FIND_JOB_CONTROLLER  ') 
-                                      return res.send(' Server Error: Could not find response ') 
+                                      return res.render("error") 
         
         
                         }               
@@ -163,7 +164,7 @@ const update = async function(req, res, next )
                             case 500: 
                                     logger.error(e,'JOB_CONTROLLER_ERROR: => UPDATE_JOB ') 
                                     logger.error(' Server encountered error while updating Job ')
-                                    return res.send(' Server Error, Could not update Job  ') 
+                                    return res.render("error")
         
                             case 400: 
                                     logger.error(e,'CREATE_JOB_ERROR: => INVALID_USER_INPUT: 400')
@@ -171,7 +172,7 @@ const update = async function(req, res, next )
         
                             default: 
                                       logger.error(e,' Unknown Response Error Code at: DELETE_JOB_CONTROLLER  ') 
-                                      return res.send(' Server Error: Could not find response ') 
+                                      return res.render("error")
         
                         }      
                     }
@@ -199,7 +200,7 @@ const update = async function(req, res, next )
                             case 500: 
                                     logger.error(e,'JOB_CONTROLLER_ERROR: => DELETE_JOB ') 
                                     logger.error(' Server encountered error while deleting Job ')
-                                    return res.send(' Server Error, Could not delete Job  ') 
+                                    return res.render("error")
         
                             case 400: 
                                     logger.error(e,'CREATE_JOB_ERROR: => INVALID_USER_INPUT: 400')
@@ -207,7 +208,7 @@ const update = async function(req, res, next )
         
                             default: 
                                       logger.error(e,' Unknown Response Error Code at: DELETE_JOB_CONTROLLER  ') 
-                                      return res.send(' Server Error: Could not find response ') 
+                                      return res.render("error")
         
                         }               
                     
@@ -236,7 +237,7 @@ const getAdminJobs = async function(req, res, next )
                     catch(e)
                     {
                         logger.error(e,' Error Occured While getting Job Created by Admin ')
-                        console.log(e) 
+                        return res.render("error")
                     }
                 }
 

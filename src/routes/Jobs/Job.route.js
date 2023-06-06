@@ -17,14 +17,13 @@ module.exports = function(app)
 
 
         // Job Routes 
-        router.get('/compose', job.getComposeJobPage )
+        router.get('/compose', validateAccess, job.getComposeJobPage )
         router.post('/', validateAccess , job.create )
-        router.get('/',  job.getJobs ) 
-        router.get('/admin', job.getAdminJobs ) 
+        router.get('/',   job.getJobs ) 
+        router.get('/admin', validateAccess,  job.getAdminJobs ) 
         router.get('/:id', job.findOne ) 
-        router.patch('/:id', validateAccess , job.update ) 
+        router.put('/:id', validateAccess , job.update ) 
         router.delete('/:id', validateAccess ,job.deleteOne ) 
-
 
         // Bind To app 
         app.use('/job', router ) 
