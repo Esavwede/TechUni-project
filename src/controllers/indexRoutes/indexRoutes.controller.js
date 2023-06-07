@@ -91,10 +91,12 @@ const getHomePage = function(req, res, next)
                 const numberOfJobsToSkip = 0 
                 const posts = await getJobsService(numberOfJobsPerPage, numberOfJobsToSkip)
 
+                
                 return res.render("jobs",{ posts }) 
             }
             catch(e)
             {
+                console.log(e) 
                 logger.error(e,' Error Occured while getting jobs page ') 
                 return res.render("error",e) 
             }

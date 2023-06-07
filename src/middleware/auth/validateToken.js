@@ -18,7 +18,7 @@ module.exports = function(req, res, next)
 
                     if(e)
                     {
-                        return res.send(' Could Not decode token ') 
+                        return res.redirect('/signin')
                     }
 
                     req.user = user 
