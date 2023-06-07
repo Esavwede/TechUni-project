@@ -42,7 +42,8 @@
 <!-- Create Job Element and Add to Jobs List -->
 <script>
 
-window.alert(' Up and running ') 
+const currentUrl = window.location.href;
+window.alert( currentUrl ) 
 
 var fetchedJobs = [] 
 var currentJobsSetIndex = 0 
@@ -327,7 +328,7 @@ function nextNavigationButtonClickHandler()
         {
           cleanJobs() 
 
-            fetch(`http://localhost:3000/jobs/${currentSkipNumber}/${jobsInPageLimit}`)
+            fetch(`${currentUrl}/${currentSkipNumber}/${jobsInPageLimit}`)
             .then(data => {
             return data.json()
             })
@@ -391,7 +392,7 @@ function appendNavigation()
 }
 
 
-    fetch(`http://localhost:3000/jobs/0/${jobsInPageLimit}`)
+    fetch(`${currentUrl}/0/${jobsInPageLimit}`)
     .then(data => {
     return data.json()
     })
