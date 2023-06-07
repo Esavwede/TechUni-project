@@ -1,246 +1,193 @@
 <%- include("partials/primary_header"); -%>
-
-
-<!-- <script>
-
-
-  // window.alert('Working')
-
-  // function createListItem()
-  // {
-  //   try 
-  //   {
-        
-  //       // Create a new li element
-  //       const listItem = document.createElement('li');
-
-  //       // Add the specified classes to the li element
-  //       listItem.classList.add(
-  //         'flex',
-  //         'mx-3',
-  //         'w-full',
-  //         'flex-col',
-  //         'items-start',
-  //         'py-6',
-  //         'px-4',
-  //         'shadow-xl',
-  //         'sm:mx-auto',
-  //         'bg-papayawhip-light',
-  //         'text-violet-800',
-  //         'sm:w-1/2',
-  //         'sm:text-base'
-  //       );
-
-  //       return listItem 
-  //   }
-  //   catch(e)
-  //   {
-  //     console.log('Error occured while creating Jobs List Item ')
-  //     console.log(e) 
-  //   }
-  // }
-
-//   function createListItemHeader( headerText )
-//   {
-//     try 
-//     {
-//         // Create a new h1 element
-//         const heading = document.createElement('h1');
-
-//         // Add the specified classes to the h1 element
-//         heading.classList.add('text-2xl', 'my-3');
-//         heading.innerHTML = headerText 
-
-//         return heading
-//     }
-//     catch(e)
-//     {
-//       console.log(' Error occured while creating list item header ')
-//       console.log(e) 
-//     }
-//   }
-
-//   function createJobRoleElement( jobRoleText )
-//   {
-//     try 
-//     {
-//         const jobRole = document.createElement('p')
-//         jobRole.classList.add('my-2')
-//         jobRole.innerText = jobRoleText 
-//         return jobRole 
-//     }
-//     catch(e)
-//     {
-//         console.log(' Error occured while creating Job role Element ')
-//         console.log(e) 
-//     }
-//   }
-
-//   function createJobLocationElement( jobLocationText )
-//   {
-//     try 
-//     {
-//         const jobLocationElement = document.createElement('p')
-//         jobLocationElement.classList.add('my-2')
-//         jobLocationElement.innerText = jobLocationText
-//         return jobLocationElement 
-//     }
-//     catch(e)
-//     {
-//         console.log(' Error occured while creating Job Location Element ')
-//         console.log(e) 
-//     }
-//   }
-
-//   function createJobSalaryElement( jobSalaryText )
-//   {
-//     try 
-//     {
-//         const jobSalaryElement = document.createElement('p')
-//         jobSalaryElement.classList.add('my-2') 
-//         jobSalaryElement.innerText = jobSalaryText 
-//         return jobSalaryElement 
-//     }
-//     catch(e)
-//     {
-//         console.log(' Error occured while creating job salary Element ')
-//         console.log(e) 
-//     }
-//   }
-  
-//   function createJobLinkElement( job_link )
-//   {
-//     try 
-//     {
-//       <p class="my-2"><a target="_blank" href="<%=post.link%>" 
-//       style=" border: 2px solid rgb(32, 104, 239);
-//       color: green; padding: 5px; border-radius: 4px; "> Apply </a> </p>
-
-//         const jobLinkParagraph = document.createElement("p") 
-//         jobLinkParagraph.classList.add("my-2") 
-
-
-//         const jobLink = document.createElement('a') 
-//         jobLink.classList.add('my-2 job-link-style') 
-//         jobLink.href = job_link 
-//         jobLink.target = "_blank" 
-//         jobLink.innerText = "Apply"
-        
-
-//         jobLinkParagraph.appendChild( jobLink ) 
-//         return jobLinkParagraph 
-//     }
-//     catch(e)
-//     {
-//       console.log(' Error occured while creating Job Link Element ')
-//       console.log(e) 
-//     }
-//   }
-
-//   function createJobContentElement( jobPostText )
-//   {
-//       try 
-//       {
-//     //     <p class="my-2"> Description: 
-//     //   <%=post.content.substring(0, 100) + " ..."%>
-
-     
-//     // </p>
-
-//     const jobContentElement = document.createElement("p") 
-//     jobContentElement.classList.add('my-2') 
-//     jobContentElement.innerText = ' Description: ' + jobPostText 
-
-//         return jobContentElement 
-//       }
-//       catch(e)
-//       {
-//         console.log(' Error occured while creating job content ') 
-//         console.log(e) 
-//       }
-//   }
-
-//   function createReadMoreButton( job_id )
-//   {
-//     try 
-//     { 
-//       // <a href="/job/<%=post._id%>">Read More</a>
-//       const readMoreButton = document.createElement('a')
-//       readMoreButton.classList.add('w-full sm:w-1/2 text-center rounded-xl p-3 my-3 bg-violet-800 text-white')
-//       readMoreButton.href = `/job/${job_id}`
-//       readMoreButton.innerText = 'Read More' 
-
-//       return readMoreButton 
-//     }
-//     catch(e)
-//     {
-//       console.log(' Error occured while creating Read More Button ')
-//       console.log(e) 
-//     }
-//   }
-
-
-//   function createJobElement( job )
-//   {
-//     try 
-//     {
-//         const jobElement = createListItem() 
-//         const jobTitle = createListItemHeader( job.title )
-//         const jobRole = createJobRoleElement( job.role ) 
-//         const jobLocation = createJobLocationElement( job.location ) 
-//         const jobSalary = createJobSalaryElement( job.salary ) 
-//         const jobLink = createJobLinkElement( job.link ) 
-//         const jobContent = createJobContentElement( job.content ) 
-//         const jobReadMoreButton = createReadMoreButton( job._id ) 
-
-//         jobElement.appendChild( jobTitle ) 
-//         jobElement.appendChild( jobRole ) 
-//         jobElement.appendChild( jobLocation ) 
-//         jobElement.appendChild( jobSalary ) 
-//         jobElement.appendChild( jobLink ) 
-//         jobElement.appendChild( jobContent ) 
-//         jobElement.appendChild( jobReadMoreButton ) 
-
-//         return jobElement 
-//     }
-//     catch(e)
-//     {
-//         console.log('ERROR OCCURED WHILE CREATING JOB ELEMENT ') 
-//         console.log(e) 
-//     }
-//   }
-
-// function addJobElementToJobsDisplay(job) 
-{
-  try 
-  {
-      const jobsContainer = document.getElementById('jobs-container')
-      jobsContainer.appendChild( job ) 
-  } 
-  catch(e) 
-  {
-    console.log(' ERROR OCCURED WHILE ADDING JOBS ELEMENT TO JOBS DISPLAY ')
-    console.log(e)
-  }
-}
-
-
-// // sample 
-// const job = { id:'39232', title:'title', role:'role', location:'location', salary:'$2000', link:'https:www.google.com', content:'content' }
-
-// const jobElement = createJobElement( job )
-// addJobElementToJobsDisplay( jobElement )
-
-
-</script> -->
-
-
 <title>TechUni : Jobs</title>
 
 <h1 class="font-bold text-violet-800 text-center text-3xl my-12">APPLY TO JOBS</h1>
 
 
-    <ul class="mx-auto my-12 flex list-none flex-col items-center justify-between align-middle gap-8 lg:flex-row lg:text-2xl sm:text-base">
-      
-    </ul>
+<ul id="jobs-container" class="mx-auto my-12 flex list-none flex-col items-center justify-between align-middle gap-8 lg:flex-row lg:text-2xl sm:text-base">
+
+</ul>
+
+<p> Hello </p>
+
+<script>
+
+      function createListItem() {
+        try {
+          const listItem = document.createElement('li');
+          listItem.classList.add(
+            'flex',
+            'mx-3',
+            'w-full',
+            'flex-col',
+            'items-start',
+            'py-6',
+            'px-4',
+            'shadow-xl',
+            'sm:mx-auto',
+            'bg-papayawhip-light',
+            'text-violet-800',
+            'sm:w-1/2',
+            'sm:text-base'
+          );
+          return listItem;
+        } catch (e) {
+          console.log('Error occurred while creating Jobs List Item ');
+          console.log(e);
+        }
+      }
+
+      function createListItemHeader(headerText) {
+        try {
+          const heading = document.createElement('h1');
+          heading.classList.add('text-2xl', 'my-3');
+          heading.innerHTML = headerText;
+          return heading;
+        } catch (e) {
+          console.log('Error occurred while creating list item header ');
+          console.log(e);
+        }
+      }
     
+      function createJobRoleElement(jobRoleText) {
+        try {
+          const jobRole = document.createElement('p');
+          jobRole.classList.add('my-2');
+          jobRole.innerText = jobRoleText;
+          return jobRole;
+        } catch (e) {
+          console.log('Error occurred while creating Job role Element ');
+          console.log(e);
+        }
+      }
+
+      function createJobLocationElement(jobLocationText) {
+        try {
+          const jobLocationElement = document.createElement('p');
+          jobLocationElement.classList.add('my-2');
+          jobLocationElement.innerText = jobLocationText;
+          return jobLocationElement;
+        } catch (e) {
+          console.log('Error occurred while creating Job Location Element ');
+          console.log(e);
+        }
+      }
+
+      function createJobSalaryElement(jobSalaryText) {
+        try {
+          const jobSalaryElement = document.createElement('p');
+          jobSalaryElement.classList.add('my-2');
+          jobSalaryElement.innerText = jobSalaryText;
+          return jobSalaryElement;
+        } catch (e) {
+          console.log('Error occurred while creating job salary Element ');
+          console.log(e);
+        }
+      }
+
+      function createJobLinkElement(job_link) {
+        try {
+          const jobLinkParagraph = document.createElement('p');
+          jobLinkParagraph.classList.add('my-2');
+    
+          const jobLink = document.createElement('a');
+          jobLink.classList.add('my-2', 'job-link-style');
+          jobLink.href = job_link;
+          jobLink.target = '_blank';
+          jobLink.innerText = 'Apply';
+    
+          jobLinkParagraph.appendChild(jobLink);
+          return jobLinkParagraph;
+        } catch (e) {
+          console.log('Error occurred while creating Job Link Element ');
+          console.log(e);
+        }
+      }
+    
+      function createJobContentElement(jobPostText) {
+        try {
+          const jobContentElement = document.createElement('p');
+          jobContentElement.classList.add('my-2');
+          jobContentElement.innerText = 'Description: ' + jobPostText;
+          return jobContentElement;
+        } catch (e) {
+          console.log('Error occurred while creating job content ');
+          console.log(e);
+        }
+      }
+
+      function createReadMoreButton(job_id) {
+        try {
+          const readMoreButton = document.createElement('a');
+          readMoreButton.classList.add(
+            'w-full',
+            'sm:w-1/2',
+            'text-center',
+            'rounded-xl',
+            'p-3',
+            'my-3',
+            'bg-violet-800',
+            'text-white'
+          );
+          
+      readMoreButton.href = `/job/${job_id}`;
+      readMoreButton.innerText = 'Read More';
+
+      return readMoreButton;
+    } catch (e) {
+      console.log('Error occurred while creating Read More Button ');
+      console.log(e);
+    }
+  }
+
+      function createJobElement(job) {
+    try {
+      const jobElement = createListItem();
+      const jobTitle = createListItemHeader(job.title);
+      const jobRole = createJobRoleElement(job.role);
+      const jobLocation = createJobLocationElement(job.location);
+      const jobSalary = createJobSalaryElement(job.salary);
+      const jobLink = createJobLinkElement(job.link);
+      const jobContent = createJobContentElement(job.content);
+      const jobReadMoreButton = createReadMoreButton(job._id);
+
+      jobElement.appendChild(jobTitle);
+      jobElement.appendChild(jobRole);
+      jobElement.appendChild(jobLocation);
+      jobElement.appendChild(jobSalary);
+      jobElement.appendChild(jobLink);
+      jobElement.appendChild(jobContent);
+      jobElement.appendChild(jobReadMoreButton);
+
+      return jobElement;
+    } catch (e) {
+      console.log('ERROR OCCURRED WHILE CREATING JOB ELEMENT ');
+      console.log(e);
+    }
+  }
+
+      function addJobElementToJobsDisplay(job) {
+        try {
+          const jobsContainer = document.getElementById('jobs-container');
+          jobsContainer.appendChild(job);
+        } catch (e) {
+          console.log('ERROR OCCURRED WHILE ADDING JOBS ELEMENT TO JOBS DISPLAY');
+          console.log(e);
+        }
+      }
+
+    const job = 
+    {
+            id: '39232',
+            title: 'title',
+            role: 'role',
+            location: 'location',
+            salary: '$2000',
+            link: 'https:www.google.com',
+            content: 'content'
+    };
+
+  const jobElement = createJobElement(job);
+  addJobElementToJobsDisplay(jobElement);
+
+</script>
