@@ -174,3 +174,127 @@
 {"level":30,"time":"2023-06-05T11:40:33.002Z","pid":15032,"hostname":"DESKTOP-5M74V4B","msg":" Jobs Routes Built "}
 {"level":30,"time":"2023-06-05T11:40:33.002Z","pid":15032,"hostname":"DESKTOP-5M74V4B","msg":" Application Routes Built "}
 {"level":30,"time":"2023-06-05T11:40:33.064Z","pid":15032,"hostname":"DESKTOP-5M74V4B","msg":"Application Started "}
+{"level":30,"time":"2023-06-07T12:03:55.389Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":"Building Application Routes "}
+{"level":30,"time":"2023-06-07T12:03:55.391Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Building User Routes "}
+{"level":30,"time":"2023-06-07T12:03:55.392Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Main Application Routes Built "}
+{"level":30,"time":"2023-06-07T12:03:55.392Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Building User Routes "}
+{"level":30,"time":"2023-06-07T12:03:55.392Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" User Routes Built "}
+{"level":30,"time":"2023-06-07T12:03:55.392Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Building Jobs Routes "}
+{"level":30,"time":"2023-06-07T12:03:55.392Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Jobs Routes Built "}
+{"level":30,"time":"2023-06-07T12:03:55.393Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Application Routes Built "}
+{"level":30,"time":"2023-06-07T12:03:55.492Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":"Application Started "}
+{"level":30,"time":"2023-06-07T12:04:12.548Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":"Index Route "}
+{"level":30,"time":"2023-06-07T12:04:18.623Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:04:18.623Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:06:12.032Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:06:12.032Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:06:13.329Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:06:13.329Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:06:14.446Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:06:14.446Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:06:18.880Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:06:18.881Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:06:24.588Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":"Index Route "}
+{"level":30,"time":"2023-06-07T12:06:27.720Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:06:27.721Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:07:16.622Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:07:16.622Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:07:17.964Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:07:17.964Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:07:19.104Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:07:19.104Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:07:22.498Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:07:22.498Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:07:45.903Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":"Index Route "}
+{"level":30,"time":"2023-06-07T12:07:50.944Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:07:50.944Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:07:56.001Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:07:56.001Z","pid":4360,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:08:35.980Z","pid":13244,"hostname":"DESKTOP-5M74V4B","msg":"Building Application Routes "}
+{"level":30,"time":"2023-06-07T12:08:35.981Z","pid":13244,"hostname":"DESKTOP-5M74V4B","msg":" Building User Routes "}
+{"level":30,"time":"2023-06-07T12:08:35.982Z","pid":13244,"hostname":"DESKTOP-5M74V4B","msg":" Main Application Routes Built "}
+{"level":30,"time":"2023-06-07T12:08:35.982Z","pid":13244,"hostname":"DESKTOP-5M74V4B","msg":" Building User Routes "}
+{"level":30,"time":"2023-06-07T12:08:35.982Z","pid":13244,"hostname":"DESKTOP-5M74V4B","msg":" User Routes Built "}
+{"level":30,"time":"2023-06-07T12:08:35.983Z","pid":13244,"hostname":"DESKTOP-5M74V4B","msg":" Building Jobs Routes "}
+{"level":30,"time":"2023-06-07T12:08:35.983Z","pid":13244,"hostname":"DESKTOP-5M74V4B","msg":" Jobs Routes Built "}
+{"level":30,"time":"2023-06-07T12:08:35.983Z","pid":13244,"hostname":"DESKTOP-5M74V4B","msg":" Application Routes Built "}
+{"level":30,"time":"2023-06-07T12:08:36.025Z","pid":13244,"hostname":"DESKTOP-5M74V4B","msg":"Application Started "}
+{"level":30,"time":"2023-06-07T12:08:41.417Z","pid":13244,"hostname":"DESKTOP-5M74V4B","msg":"Index Route "}
+{"level":30,"time":"2023-06-07T12:08:45.197Z","pid":13244,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:08:45.197Z","pid":13244,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:09:21.506Z","pid":11284,"hostname":"DESKTOP-5M74V4B","msg":"Building Application Routes "}
+{"level":30,"time":"2023-06-07T12:09:21.507Z","pid":11284,"hostname":"DESKTOP-5M74V4B","msg":" Building User Routes "}
+{"level":30,"time":"2023-06-07T12:09:21.508Z","pid":11284,"hostname":"DESKTOP-5M74V4B","msg":" Main Application Routes Built "}
+{"level":30,"time":"2023-06-07T12:09:21.508Z","pid":11284,"hostname":"DESKTOP-5M74V4B","msg":" Building User Routes "}
+{"level":30,"time":"2023-06-07T12:09:21.508Z","pid":11284,"hostname":"DESKTOP-5M74V4B","msg":" User Routes Built "}
+{"level":30,"time":"2023-06-07T12:09:21.508Z","pid":11284,"hostname":"DESKTOP-5M74V4B","msg":" Building Jobs Routes "}
+{"level":30,"time":"2023-06-07T12:09:21.509Z","pid":11284,"hostname":"DESKTOP-5M74V4B","msg":" Jobs Routes Built "}
+{"level":30,"time":"2023-06-07T12:09:21.509Z","pid":11284,"hostname":"DESKTOP-5M74V4B","msg":" Application Routes Built "}
+{"level":30,"time":"2023-06-07T12:09:21.656Z","pid":11284,"hostname":"DESKTOP-5M74V4B","msg":"Application Started "}
+{"level":30,"time":"2023-06-07T12:09:29.236Z","pid":888,"hostname":"DESKTOP-5M74V4B","msg":"Building Application Routes "}
+{"level":30,"time":"2023-06-07T12:09:29.238Z","pid":888,"hostname":"DESKTOP-5M74V4B","msg":" Building User Routes "}
+{"level":30,"time":"2023-06-07T12:09:29.239Z","pid":888,"hostname":"DESKTOP-5M74V4B","msg":" Main Application Routes Built "}
+{"level":30,"time":"2023-06-07T12:09:29.239Z","pid":888,"hostname":"DESKTOP-5M74V4B","msg":" Building User Routes "}
+{"level":30,"time":"2023-06-07T12:09:29.239Z","pid":888,"hostname":"DESKTOP-5M74V4B","msg":" User Routes Built "}
+{"level":30,"time":"2023-06-07T12:09:29.239Z","pid":888,"hostname":"DESKTOP-5M74V4B","msg":" Building Jobs Routes "}
+{"level":30,"time":"2023-06-07T12:09:29.240Z","pid":888,"hostname":"DESKTOP-5M74V4B","msg":" Jobs Routes Built "}
+{"level":30,"time":"2023-06-07T12:09:29.240Z","pid":888,"hostname":"DESKTOP-5M74V4B","msg":" Application Routes Built "}
+{"level":30,"time":"2023-06-07T12:09:29.303Z","pid":888,"hostname":"DESKTOP-5M74V4B","msg":"Application Started "}
+{"level":30,"time":"2023-06-07T12:09:38.462Z","pid":11900,"hostname":"DESKTOP-5M74V4B","msg":"Building Application Routes "}
+{"level":30,"time":"2023-06-07T12:09:38.463Z","pid":11900,"hostname":"DESKTOP-5M74V4B","msg":" Building User Routes "}
+{"level":30,"time":"2023-06-07T12:09:38.465Z","pid":11900,"hostname":"DESKTOP-5M74V4B","msg":" Main Application Routes Built "}
+{"level":30,"time":"2023-06-07T12:09:38.465Z","pid":11900,"hostname":"DESKTOP-5M74V4B","msg":" Building User Routes "}
+{"level":30,"time":"2023-06-07T12:09:38.465Z","pid":11900,"hostname":"DESKTOP-5M74V4B","msg":" User Routes Built "}
+{"level":30,"time":"2023-06-07T12:09:38.465Z","pid":11900,"hostname":"DESKTOP-5M74V4B","msg":" Building Jobs Routes "}
+{"level":30,"time":"2023-06-07T12:09:38.466Z","pid":11900,"hostname":"DESKTOP-5M74V4B","msg":" Jobs Routes Built "}
+{"level":30,"time":"2023-06-07T12:09:38.466Z","pid":11900,"hostname":"DESKTOP-5M74V4B","msg":" Application Routes Built "}
+{"level":30,"time":"2023-06-07T12:09:38.545Z","pid":11900,"hostname":"DESKTOP-5M74V4B","msg":"Application Started "}
+{"level":30,"time":"2023-06-07T12:10:25.383Z","pid":11900,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:10:25.384Z","pid":11900,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:10:28.115Z","pid":11900,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:10:28.115Z","pid":11900,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:10:31.570Z","pid":11900,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:10:31.570Z","pid":11900,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:10:45.831Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":"Building Application Routes "}
+{"level":30,"time":"2023-06-07T12:10:45.832Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Building User Routes "}
+{"level":30,"time":"2023-06-07T12:10:45.833Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Main Application Routes Built "}
+{"level":30,"time":"2023-06-07T12:10:45.833Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Building User Routes "}
+{"level":30,"time":"2023-06-07T12:10:45.834Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" User Routes Built "}
+{"level":30,"time":"2023-06-07T12:10:45.834Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Building Jobs Routes "}
+{"level":30,"time":"2023-06-07T12:10:45.834Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Jobs Routes Built "}
+{"level":30,"time":"2023-06-07T12:10:45.834Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Application Routes Built "}
+{"level":30,"time":"2023-06-07T12:10:45.885Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":"Application Started "}
+{"level":30,"time":"2023-06-07T12:10:49.406Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:10:49.407Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:10:52.774Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:10:52.774Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:11:00.153Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":"Index Route "}
+{"level":30,"time":"2023-06-07T12:11:06.600Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:11:06.600Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:13:24.458Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:13:24.458Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:13:34.068Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Getting Signin Page "}
+{"level":30,"time":"2023-06-07T12:13:37.668Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Signin Controller "}
+{"level":30,"time":"2023-06-07T12:13:37.669Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":"Posted User Login Data "}
+{"level":30,"time":"2023-06-07T12:13:37.669Z","pid":7532,"hostname":"DESKTOP-5M74V4B","email":"odomaurice@yahoo.com","password":"admin123"}
+{"level":30,"time":"2023-06-07T12:14:08.023Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Validating user access token "}
+{"level":30,"time":"2023-06-07T12:14:08.031Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" In create job route "}
+{"level":30,"time":"2023-06-07T12:14:08.032Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Creating New Job "}
+{"level":50,"time":"2023-06-07T12:14:08.040Z","pid":7532,"hostname":"DESKTOP-5M74V4B","err":{"type":"ValidationError","message":"job validation failed: link: Path `link` is required.","stack":"ValidationError: job validation failed: link: Path `link` is required.\n    at Document.invalidate (C:\\Users\\DELL\\Desktop\\TechUni-project\\node_modules\\mongoose\\lib\\document.js:3108:32)\n    at C:\\Users\\DELL\\Desktop\\TechUni-project\\node_modules\\mongoose\\lib\\document.js:2901:17\n    at C:\\Users\\DELL\\Desktop\\TechUni-project\\node_modules\\mongoose\\lib\\schematype.js:1350:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)","errors":{"link":{"name":"ValidatorError","message":"Path `link` is required.","properties":{"message":"Path `link` is required.","type":"required","path":"link","value":""},"kind":"required","path":"link","value":""}},"_message":"job validation failed"},"msg":"JOB_SERVICE_ERROR: => CREATE_JOB_ERROR "}
+{"level":50,"time":"2023-06-07T12:14:08.042Z","pid":7532,"hostname":"DESKTOP-5M74V4B","err":{"type":"ValidationError","message":"job validation failed: link: Path `link` is required.","stack":"ValidationError: job validation failed: link: Path `link` is required.\n    at Document.invalidate (C:\\Users\\DELL\\Desktop\\TechUni-project\\node_modules\\mongoose\\lib\\document.js:3108:32)\n    at C:\\Users\\DELL\\Desktop\\TechUni-project\\node_modules\\mongoose\\lib\\document.js:2901:17\n    at C:\\Users\\DELL\\Desktop\\TechUni-project\\node_modules\\mongoose\\lib\\schematype.js:1350:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)","errors":{"link":{"name":"ValidatorError","message":"Path `link` is required.","properties":{"message":"Path `link` is required.","type":"required","path":"link","value":""},"kind":"required","path":"link","value":""}},"_message":"job validation failed","statusCode":500},"msg":"JOB_CONTROLLER_ERROR: => CREATE_JOB "}
+{"level":30,"time":"2023-06-07T12:14:29.051Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Validating user access token "}
+{"level":30,"time":"2023-06-07T12:14:29.057Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" In create job route "}
+{"level":30,"time":"2023-06-07T12:14:29.057Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Creating New Job "}
+{"level":50,"time":"2023-06-07T12:14:29.060Z","pid":7532,"hostname":"DESKTOP-5M74V4B","err":{"type":"ValidationError","message":"job validation failed: link: Path `link` is required.","stack":"ValidationError: job validation failed: link: Path `link` is required.\n    at Document.invalidate (C:\\Users\\DELL\\Desktop\\TechUni-project\\node_modules\\mongoose\\lib\\document.js:3108:32)\n    at C:\\Users\\DELL\\Desktop\\TechUni-project\\node_modules\\mongoose\\lib\\document.js:2901:17\n    at C:\\Users\\DELL\\Desktop\\TechUni-project\\node_modules\\mongoose\\lib\\schematype.js:1350:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)","errors":{"link":{"name":"ValidatorError","message":"Path `link` is required.","properties":{"message":"Path `link` is required.","type":"required","path":"link","value":""},"kind":"required","path":"link","value":""}},"_message":"job validation failed"},"msg":"JOB_SERVICE_ERROR: => CREATE_JOB_ERROR "}
+{"level":50,"time":"2023-06-07T12:14:29.060Z","pid":7532,"hostname":"DESKTOP-5M74V4B","err":{"type":"ValidationError","message":"job validation failed: link: Path `link` is required.","stack":"ValidationError: job validation failed: link: Path `link` is required.\n    at Document.invalidate (C:\\Users\\DELL\\Desktop\\TechUni-project\\node_modules\\mongoose\\lib\\document.js:3108:32)\n    at C:\\Users\\DELL\\Desktop\\TechUni-project\\node_modules\\mongoose\\lib\\document.js:2901:17\n    at C:\\Users\\DELL\\Desktop\\TechUni-project\\node_modules\\mongoose\\lib\\schematype.js:1350:9\n    at process.processTicksAndRejections (node:internal/process/task_queues:77:11)","errors":{"link":{"name":"ValidatorError","message":"Path `link` is required.","properties":{"message":"Path `link` is required.","type":"required","path":"link","value":""},"kind":"required","path":"link","value":""}},"_message":"job validation failed","statusCode":500},"msg":"JOB_CONTROLLER_ERROR: => CREATE_JOB "}
+{"level":30,"time":"2023-06-07T12:16:34.583Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Signin Controller "}
+{"level":30,"time":"2023-06-07T12:16:34.583Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":"Posted User Login Data "}
+{"level":30,"time":"2023-06-07T12:16:34.583Z","pid":7532,"hostname":"DESKTOP-5M74V4B","email":"odomaurice@yahoo.com","password":"admin123"}
+{"level":30,"time":"2023-06-07T12:16:39.768Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Getting Signin Page "}
+{"level":30,"time":"2023-06-07T12:16:42.747Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Signin Controller "}
+{"level":30,"time":"2023-06-07T12:16:42.747Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":"Posted User Login Data "}
+{"level":30,"time":"2023-06-07T12:16:42.747Z","pid":7532,"hostname":"DESKTOP-5M74V4B","email":"odomaurice@yahoo.com","password":"admin123"}
+{"level":30,"time":"2023-06-07T12:16:47.923Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:16:47.923Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
+{"level":30,"time":"2023-06-07T12:18:39.713Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs Page "}
+{"level":30,"time":"2023-06-07T12:18:39.713Z","pid":7532,"hostname":"DESKTOP-5M74V4B","msg":" Getting Jobs for jobs page "}
