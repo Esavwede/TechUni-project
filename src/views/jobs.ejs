@@ -9,12 +9,46 @@
 
 </ul>
 
-<p> Hello </p>
+
+<style>
+
+  #navigation-buttons-container 
+  {
+    width: auto;
+    height: auto; 
+    padding: 5px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #back-navigation-button 
+  {
+      width: auto;
+      height: auto;
+      color: blue; 
+  }
+
+  #next-navigation-button 
+  {
+    width: auto;
+      height: auto;
+      color: blue; 
+  }
+
+  
+</style>
 
 <!-- Create Job Element and Add to Jobs List -->
 <script>
 
-      function createListItem() {
+window.alert(' Up and running ') 
+
+var fetchedJobs = [] 
+var currentJobsSetIndex = 0 
+var jobsInPageLimit = 2
+
+      function createListItem(){
         try {
           const listItem = document.createElement('li');
           listItem.classList.add(
@@ -179,14 +213,15 @@
         }
       }
 
-
       function extractJobData(job)
       {
         console.log(' Extracting Job Data ')
-        return { title: job.title, role: job.role, location: job.location, salary: job.salary, link: job.link, content: job.content, _id: job._id }
+        const _content = job.content.substring(0, 100) + " ..."
+        return { title: job.title, role: job.role, location: job.location, salary: job.salary, link: job.link, content: _content, _id: job._id }
       }
 
-      function addJobsToDisplay(jobs)
+
+function addJobsToDisplay(jobs)
 {
   try 
   {
@@ -216,18 +251,168 @@
   }
 }
 
+function backNavigationButtonClickHandler()
+{
+    try 
+    {
+        const prevSkipNumber = window.localStorage.getItem('skip') 
+        var newSkipNumber = prevSkipNumber - jobsInPageLimit 
+        var currentSkipNumber = null 
+
+        if(  newSkipNumber  < 0 )
+        {
+            currentSkipNumber = 0 
+            return 
+        }
+            currentSkipNumber = prevSkipNumber - jobsInPageLimit 
+
+            var prevJobsSetIndex = currentJobsSetIndex - 1 
+
+       cleanJobs() 
+
+       addJobsToDisplay( fetchedJobs[prevJobsSetIndex] ) 
+
+       appendNavigation() 
+
+    }
+    catch(e)
+    {
+      console.log(' Error occured while handling back navigation click ') 
+    }
+}
+
+
+function cleanJobs()
+{
+  try 
+  {
+      const jobsContainer = document.getElementById('jobs-container') 
+      jobsContainer.innerHTML = null
       
-    fetch('http://localhost:3000/jobs/0/5')
+  }
+  catch(e)
+  {
+    console.log(' Error occured while cleaning Jobs') 
+    console.log(e) 
+  }
+}
+
+
+function removeNavigation()
+{
+  const jobsContainer = document.getElementById('jobs-container')
+  const jobsNavigationContainer = document.getElementById('jobs-navigation-container') 
+  jobsContainer.removeChild( jobsNavigationContainer )
+}
+
+
+function nextNavigationButtonClickHandler()
+{
+    try 
+    {
+        const prevSkipNumber = window.localStorage.getItem('skip') 
+        var currentSkipNumber = prevSkipNumber + jobsInPageLimit 
+       
+        var nextSetIndex = currentJobsSetIndex + 1 
+
+        var nextSetAlreadyLoaded = fetchedJobs[nextSetIndex] 
+
+        if( nextSetAlreadyLoaded )
+        {
+          cleanJobs() 
+          addJobsToDisplay( fetchedJobs[nextSetIndex] ) 
+          appendNavigation() 
+        }
+        else 
+        {
+          cleanJobs() 
+
+            fetch(`http://localhost:3000/jobs/${currentSkipNumber}/${jobsInPageLimit}`)
+            .then(data => {
+            return data.json()
+            })
+            .then(data => {
+
+              // set initial page 
+              window.localStorage.setItem('skip', currentSkipNumber ) 
+              window.localStorage.setItem('limit', jobsInPageLimit )
+
+              const posts = data.posts 
+              fetchedJobs.push( posts ) 
+              currentJobsSetIndex = currentJobsSetIndex + 1 
+              addJobsToDisplay( posts ) 
+
+              appendNavigation() 
+            });
+        }
+
+    
+              
+    }
+    catch(e)
+    {
+      console.log(' Error occured while handling back navigation click ') 
+    }
+}
+
+
+function appendNavigation()
+{
+  try 
+  {
+
+      const navigationButtonsContainer = document.createElement('div')
+      navigationButtonsContainer.id = 'navigation-buttons-container' 
+
+      const backButton = document.createElement('button') 
+      backButton.id = 'back-navigation-button' 
+      backButton.innerText = 'Back'
+      backButton.addEventListener('click', backNavigationButtonClickHandler, false )
+
+      const nextButton = document.createElement('button') 
+      nextButton.id = 'next-navigation-button' 
+      nextButton.innerText = 'Next' 
+      nextButton.addEventListener('click', nextNavigationButtonClickHandler, false)
+
+      navigationButtonsContainer.appendChild( backButton )
+      navigationButtonsContainer.appendChild( nextButton ) 
+
+
+      const jobsContainer = document.getElementById('jobs-container')
+      jobsContainer.appendChild( navigationButtonsContainer ) 
+
+
+  }
+  catch(e)
+  {
+    console.log(' Error occured while appending navigation buttons ')
+    console.log(e) 
+  }
+}
+
+
+    fetch(`http://localhost:3000/jobs/0/${jobsInPageLimit}`)
     .then(data => {
     return data.json()
     })
     .then(data => {
+
+      // set initial page 
+      window.localStorage.setItem('skip', 0 ) 
+      window.localStorage.setItem('limit', jobsInPageLimit )
+
        const posts = data.posts 
+       fetchedJobs.push( posts ) 
+       currentJobsSetIndex = 0 
        addJobsToDisplay( posts ) 
+
+       appendNavigation() 
     });
 
 
-
 </script>
+
+
+
 
 
