@@ -98,7 +98,7 @@ const getHomePage = function(req, res, next)
             {
                 console.log(e) 
                 logger.error(e,' Error Occured while getting jobs page ') 
-                return res.render("error",e) 
+                return res.render("error",{e}) 
             }
         }
 
