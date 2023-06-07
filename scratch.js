@@ -1,31 +1,41 @@
 /**
  * 
  * 
- *  send job page 
- *  set current page to 0 
- *  set next index to start from 7
- *  limit to be 7 
+ *
+ * Load Jobs View Page  
+ *
+ *
+ * Implement Pagination on Page 
  * 
  * 
- *  next button is clicked
- *  next button navigates to next page 
+ * Load Jobs into Jobs View Page 
  * 
  * 
- *  back button is clicked 
- *  back button navigates to prev page  
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
- * 
+ * Load Jobs into Elements on page 
  * 
  * 
  * 
  * 
  */
+
+
+
+ /**
+  * 
+  * 
+  * Creating  Elements 
+  * 
+  * 
+  * Create component elements 
+  * 
+  * 
+  * Put Data in the elements 
+  * 
+  * 
+  * Put the elements together 
+  * 
+  * 
+  * Add element to list 
+  * 
+  * 
+  */
