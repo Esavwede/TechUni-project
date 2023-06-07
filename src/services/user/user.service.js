@@ -12,6 +12,8 @@ const signinUser = function( userData )
             return new Promise( async(resolve, reject)=>{
                 try 
                 {
+                    logger.info('Posted User Login Data ')
+                    logger.info( userData )
                     const user = await User.findOne({ email: userData.email })
 
                     console.log(' Found User => ')
@@ -40,7 +42,7 @@ const signinUser = function( userData )
 
                     const { _id, firstname, email } = user 
                     const tokenData = { _id, firstname, email } 
-                    const token = jwt.sign( tokenData, process.env.JWT_SECRET,{ expiresIn: '30m' } )
+                    const token = jwt.sign( tokenData, process.env.JWT_SECRET,{ expiresIn: '60m' } )
 
                     resolve(token) 
 

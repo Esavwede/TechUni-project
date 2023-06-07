@@ -1,0 +1,53 @@
+<%- include("partials/primary_header"); -%>
+ <title>TechUni : Jobs</title>
+
+<h1 class="font-bold text-violet-800 text-center text-3xl my-12">APPLY TO JOBS</h1>
+
+<% if( posts.length > 0 ) {  %>
+
+  <% posts.forEach(function(post){ %>
+
+    <ul class="mx-auto my-12 flex list-none flex-col items-center justify-between align-middle gap-8 lg:flex-row lg:text-2xl sm:text-base">
+      <li  class="flex mx-3 w-full flex-col items-start py-6 px-4 shadow-xl sm:mx-auto bg-papayawhip-light text-violet-800 sm:w-1/2 sm:text-base">
+        
+       
+        <h1 class="text-2xl my-3"><%=post.title%></h1>
+    
+          <p class="my-2">Job role: <%=post.role%></p>
+          <p class="my-2">Location: <%=post.location%></p>
+          <p class="my-2"> Salary: <%=post.salary%></p>
+          <p class="my-2"><a target="_blank" href="<%=post.link%>" 
+            style=" border: 2px solid rgb(32, 104, 239);
+            color: green; padding: 5px; border-radius: 4px; "> Apply </a> </p>
+          <p class="my-2"> Description: 
+            <%=post.content.substring(0, 100) + " ..."%>
+    
+           
+          </p>
+           <a id="<%=post.link%>">Go to Job</a>
+        
+           <a class=" w-full sm:w-1/2 text-center rounded-xl p-3 my-3 bg-violet-800 text-white" href="/job/<%=post._id%>">Read More</a>
+    
+      </li>
+    </ul>
+    
+     
+        <a href="#" class="back-to-top d-flex  align-items-center justify-content-center"><i
+                class="fas fa-arrow-circle-up"></i></a>
+    
+
+<div id="nav-buttons">
+  <button>Back</button>
+  <button>Next</button>
+</div>
+    <script src="js/preload.js"></script>
+    
+    
+    <% }) %>
+    
+
+<% } else {  %> 
+
+  <h1> No Jobs At this time </h1>
+
+<% } %> 

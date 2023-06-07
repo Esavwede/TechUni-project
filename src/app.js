@@ -16,6 +16,7 @@ const { createDatabaseConnection } = require('./system/database/connection/creat
 
 var app = express();
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -34,9 +35,14 @@ buildRoutes(app)
 const db = createDatabaseConnection() 
 
 
-
-
 // catch 404 and forward to error handler
+
+// Catch Pages That Do not exist 
+app.get("*",(req, res)=>{
+  res.render("404") 
+})
+
+
 app.use(function(req, res, next) {
   next(createError(404));
 });
@@ -54,10 +60,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-
 logger.info('Application Started ') 
 
 
 // App Crash Settings 
-
 module.exports = app;

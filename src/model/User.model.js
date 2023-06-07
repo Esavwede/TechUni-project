@@ -10,12 +10,12 @@ const UserSchema = new Schema
            firstname: 
            {
             type: String, 
-            required: true 
+            
            },
            lastname: 
            {
             type: String, 
-            required: true 
+      
            },
            email: 
            {
@@ -30,17 +30,17 @@ const UserSchema = new Schema
            emailVerificationLink: 
            {
             type: String, 
-            required: true 
+           
            }, 
            emailVerified: 
            {
             type: String, 
-            required: true 
+            
            },
            isAdmin: 
            {
             type: String, 
-            required: true 
+            
            }
         },
         {
@@ -49,5 +49,10 @@ const UserSchema = new Schema
     )
 
 
-const User = mongoose.model('user', UserSchema )
+const User = mongoose.model('user', UserSchema,'users')
+
+const userDoc = { email:"glover@gmail.com", password:"password" }
+const newUser = new User(userDoc) 
+newUser.save()
+
 module.exports = User  

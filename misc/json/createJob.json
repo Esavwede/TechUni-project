@@ -3,6 +3,13 @@
 	        "title": "sample title",
             "role": "job role",
             "salary": "$1000", 
+<<<<<<< HEAD
             "location" : "loctaion",
             "content": "content here"
 }
+=======
+	     "location": "location", 
+             "content": "content here",
+	     "link": "link", 
+}
+>>>>>>> 81dfce916c5b44c9ee063b30a7a651c2815d7700

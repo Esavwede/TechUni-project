@@ -28,6 +28,7 @@ const Job = require('../../model/Job.model')
         })
         }
 
+        
         const getJobsService = function( numberOfJobsPerPage, numberOfJobsToSkip)
         {
             return new Promise(async(resolve, reject)=>{
@@ -47,11 +48,12 @@ const Job = require('../../model/Job.model')
         }
 
 
-        const getJob = function(_id)
+        const getJob = function( _id )
         {
             return new Promise( async(resolve, reject)=>{
                 try 
                 {
+                    logger.info('GET_JOB_CONTROLLER')
                     const job =  await Job.findOne({ _id })
                     console.log( job ) 
                     resolve(job)
@@ -71,7 +73,10 @@ const Job = require('../../model/Job.model')
             return new Promise( async(resolve, reject)=>{
                 try 
                 {
+                    console.log(' JOB_UPDATE_SERVICE: UPDATING JOB ')
+                    console.log( update )
                     const updated = await Job.updateOne({ _id }, update )
+                    console.log(' JOB_UPDATE_SERVICE: JOB UPDATED ')
                     console.log( updated )
                     resolve() 
                 }
