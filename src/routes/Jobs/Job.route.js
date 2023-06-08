@@ -6,6 +6,7 @@ const logger = require('../../system/logger/index.js')
 
 const validateAccess = require('../../middleware/auth/validateToken.js') 
 const job = require('../../controllers/Job/job.controller') 
+const index = require('../../controllers/indexRoutes/indexRoutes.controller.js') 
 
 
 module.exports = function(app)

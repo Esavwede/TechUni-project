@@ -1,4 +1,5 @@
 <%- include("partials/primary_header"); -%>
+
 <title>TechUni : Jobs</title>
 
 <h1 class="font-bold text-violet-800 text-center text-3xl my-12">APPLY TO JOBS</h1>
@@ -8,11 +9,47 @@
 
 </ul>
 
-<p> Hello </p>
 
+<style>
+
+  #navigation-buttons-container 
+  {
+    width: auto;
+    height: auto; 
+    padding: 5px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #back-navigation-button 
+  {
+      width: auto;
+      height: auto;
+      color: blue; 
+  }
+
+  #next-navigation-button 
+  {
+    width: auto;
+      height: auto;
+      color: blue; 
+  }
+
+  
+</style>
+
+<!-- Create Job Element and Add to Jobs List -->
 <script>
 
-      function createListItem() {
+const currentUrl = window.location.href;
+window.alert( currentUrl ) 
+
+var fetchedJobs = [] 
+var currentJobsSetIndex = 0 
+var jobsInPageLimit = 2
+
+      function createListItem(){
         try {
           const listItem = document.createElement('li');
           listItem.classList.add(
@@ -41,7 +78,7 @@
         try {
           const heading = document.createElement('h1');
           heading.classList.add('text-2xl', 'my-3');
-          heading.innerHTML = headerText;
+          heading.innerHTML = 'Title' + headerText;
           return heading;
         } catch (e) {
           console.log('Error occurred while creating list item header ');
@@ -53,7 +90,7 @@
         try {
           const jobRole = document.createElement('p');
           jobRole.classList.add('my-2');
-          jobRole.innerText = jobRoleText;
+          jobRole.innerText = 'Role' + jobRoleText;
           return jobRole;
         } catch (e) {
           console.log('Error occurred while creating Job role Element ');
@@ -65,7 +102,7 @@
         try {
           const jobLocationElement = document.createElement('p');
           jobLocationElement.classList.add('my-2');
-          jobLocationElement.innerText = jobLocationText;
+          jobLocationElement.innerText = 'Location' +  jobLocationText;
           return jobLocationElement;
         } catch (e) {
           console.log('Error occurred while creating Job Location Element ');
@@ -77,7 +114,7 @@
         try {
           const jobSalaryElement = document.createElement('p');
           jobSalaryElement.classList.add('my-2');
-          jobSalaryElement.innerText = jobSalaryText;
+          jobSalaryElement.innerText = 'Salary' + jobSalaryText;
           return jobSalaryElement;
         } catch (e) {
           console.log('Error occurred while creating job salary Element ');
@@ -91,7 +128,8 @@
           jobLinkParagraph.classList.add('my-2');
     
           const jobLink = document.createElement('a');
-          jobLink.classList.add('my-2', 'job-link-style');
+          jobLink.classList.add('my-2');
+          jobLink.classList.add('job-link-style')
           jobLink.href = job_link;
           jobLink.target = '_blank';
           jobLink.innerText = 'Apply';
@@ -176,18 +214,206 @@
         }
       }
 
-    const job = 
-    {
-            id: '39232',
-            title: 'title',
-            role: 'role',
-            location: 'location',
-            salary: '$2000',
-            link: 'https:www.google.com',
-            content: 'content'
-    };
+      function extractJobData(job)
+      {
+        console.log(' Extracting Job Data ')
+        const _content = job.content.substring(0, 100) + " ..."
+        return { title: job.title, role: job.role, location: job.location, salary: job.salary, link: job.link, content: _content, _id: job._id }
+      }
 
-  const jobElement = createJobElement(job);
-  addJobElementToJobsDisplay(jobElement);
+
+function addJobsToDisplay(jobs)
+{
+  try 
+  {
+
+    var jobData 
+    console.log(' Adding Jobs To Display ')
+    console.log( jobs ) 
+    console.log( jobs.length ) 
+
+    for( var i = 0; i < jobs.length; i++ )
+      { 
+       
+            console.log( 'here ' + jobs[i] ) 
+            jobData = extractJobData( jobs[i] ) 
+            console.log( jobData ) 
+
+            var newJob = createJobElement( jobData )
+            addJobElementToJobsDisplay( newJob )
+      }
+
+      
+  }
+  catch(e)
+  {
+    console.log(' Error occured while adding jobs to display ') 
+    console.log(e) 
+  }
+}
+
+function backNavigationButtonClickHandler()
+{
+    try 
+    {
+        const prevSkipNumber = window.localStorage.getItem('skip') 
+        var newSkipNumber = prevSkipNumber - jobsInPageLimit 
+        var currentSkipNumber = null 
+
+        if(  newSkipNumber  < 0 )
+        {
+            currentSkipNumber = 0 
+            return 
+        }
+            currentSkipNumber = prevSkipNumber - jobsInPageLimit 
+
+            var prevJobsSetIndex = currentJobsSetIndex - 1 
+
+       cleanJobs() 
+
+       addJobsToDisplay( fetchedJobs[prevJobsSetIndex] ) 
+
+       appendNavigation() 
+
+    }
+    catch(e)
+    {
+      console.log(' Error occured while handling back navigation click ') 
+    }
+}
+
+
+function cleanJobs()
+{
+  try 
+  {
+      const jobsContainer = document.getElementById('jobs-container') 
+      jobsContainer.innerHTML = null
+      
+  }
+  catch(e)
+  {
+    console.log(' Error occured while cleaning Jobs') 
+    console.log(e) 
+  }
+}
+
+
+function removeNavigation()
+{
+  const jobsContainer = document.getElementById('jobs-container')
+  const jobsNavigationContainer = document.getElementById('jobs-navigation-container') 
+  jobsContainer.removeChild( jobsNavigationContainer )
+}
+
+
+function nextNavigationButtonClickHandler()
+{
+    try 
+    {
+        const prevSkipNumber = window.localStorage.getItem('skip') 
+        var currentSkipNumber = prevSkipNumber + jobsInPageLimit 
+       
+        var nextSetIndex = currentJobsSetIndex + 1 
+
+        var nextSetAlreadyLoaded = fetchedJobs[nextSetIndex] 
+
+        if( nextSetAlreadyLoaded )
+        {
+          cleanJobs() 
+          addJobsToDisplay( fetchedJobs[nextSetIndex] ) 
+          appendNavigation() 
+        }
+        else 
+        {
+          cleanJobs() 
+
+            fetch(`${currentUrl}/${currentSkipNumber}/${jobsInPageLimit}`)
+            .then(data => {
+            return data.json()
+            })
+            .then(data => {
+
+              // set initial page 
+              window.localStorage.setItem('skip', currentSkipNumber ) 
+              window.localStorage.setItem('limit', jobsInPageLimit )
+
+              const posts = data.posts 
+              fetchedJobs.push( posts ) 
+              currentJobsSetIndex = currentJobsSetIndex + 1 
+              addJobsToDisplay( posts ) 
+
+              appendNavigation() 
+            });
+        }
+
+    
+              
+    }
+    catch(e)
+    {
+      console.log(' Error occured while handling back navigation click ') 
+    }
+}
+
+
+function appendNavigation()
+{
+  try 
+  {
+
+      const navigationButtonsContainer = document.createElement('div')
+      navigationButtonsContainer.id = 'navigation-buttons-container' 
+
+      const backButton = document.createElement('button') 
+      backButton.id = 'back-navigation-button' 
+      backButton.innerText = 'Back'
+      backButton.addEventListener('click', backNavigationButtonClickHandler, false )
+
+      const nextButton = document.createElement('button') 
+      nextButton.id = 'next-navigation-button' 
+      nextButton.innerText = 'Next' 
+      nextButton.addEventListener('click', nextNavigationButtonClickHandler, false)
+
+      navigationButtonsContainer.appendChild( backButton )
+      navigationButtonsContainer.appendChild( nextButton ) 
+
+
+      const jobsContainer = document.getElementById('jobs-container')
+      jobsContainer.appendChild( navigationButtonsContainer ) 
+
+
+  }
+  catch(e)
+  {
+    console.log(' Error occured while appending navigation buttons ')
+    console.log(e) 
+  }
+}
+
+
+    fetch(`${currentUrl}/0/${jobsInPageLimit}`)
+    .then(data => {
+    return data.json()
+    })
+    .then(data => {
+
+      // set initial page 
+      window.localStorage.setItem('skip', 0 ) 
+      window.localStorage.setItem('limit', jobsInPageLimit )
+
+       const posts = data.posts 
+       fetchedJobs.push( posts ) 
+       currentJobsSetIndex = 0 
+       addJobsToDisplay( posts ) 
+
+       appendNavigation() 
+    });
+
 
 </script>
+
+
+
+
+
