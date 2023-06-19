@@ -1,11 +1,215 @@
 <%- include("partials/primary_header"); -%>
  <title>TechUni</title>
  <style>
+
+  .vid-section{
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+}
+.vid-section::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.vid-section.active::before{
+  opacity: 1;
+}
+.container{
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #fff;
+  padding: 5px 10px;
+  position: relative;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+ .vid-section.active .container{
+   visibility: hidden;
+ }
+.container .main-video{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: 100%;
+ 
+  opacity: 0;
+  pointer-events: none;
+  visibility: visible;
+  transition: all 0.4s ease;
+}
+.vid-section.active .container .main-video{
+  transform:translate(-50%, -50%) scale(1);
+  opacity: 1;
+   z-index: 999;
+  pointer-events: auto;
+}
+.container .main-video video{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  outline: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.container .main-video .close{
+  position: absolute;
+  top: -10px;
+  right: -36px;
+  font-size: 35px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 1000;
+  pointer-events: auto;
+  opacity: 0.6;
+}
+.container .main-video .close:hover{
+  opacity: 1;
+}
+.container .videos{
+  position: relative;
+  height: 200px;
+  width: calc(100% / 2 - 5px);
+  margin: 5px 0;
+  cursor: pointer;
+}
+.container .videos::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.3);
+  pointer-events: none;
+}
+.container .videos video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  outline: none;
+  pointer-events: none;
+}
+.container .videos i{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: #fff;
+  pointer-events: none;
+}
+@media (max-width: 750px) {
+  .container .main-video{
+    position: fixed;
+    width: 83%;
+  }
+  .container .videos{
+    width: 100%;
+    height: 320px;
+  }
+}
+@media (max-width: 600px) {
+  .container .videos{
+    width: 100%;
+    height: 250px;
+  }
+}
+
+  .wrapper{
+  max-width: 1200px;
+  margin: 5rem auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .box{
+  background: #fff;
+  color: #000;
+  width: calc(33% - 10px);
+  padding: 25px;
+  border-radius: 3px;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.15);
+}
+.wrapper .box i.quote{
+  font-size: 20px;
+  color: #7e22ce;
+}
+.wrapper .box .content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  margin: 4rem 0;
+}
+.box .info .name{
+  font-weight: 600;
+  font-size: 17px;
+}
+.box .info .job{
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+}
+.box .info .stars{
+  margin-top: 2px;
+}
+.box .info .stars i{
+  color: green;
+}
+.box .content .image{
+  height: 75px;
+  width: 75px;
+  padding: 3px;
+ 
+  border-radius: 50%;
+}
+.content .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.box:hover .content .image img{
+  border-color: #fff;
+}
+@media (max-width: 1045px) {
+  .wrapper .box{
+    width: calc(50% - 10px);
+    margin: 10px 0;
+  }
+}
+@media (max-width: 702px) {
+  .wrapper .box{
+    width: 100%;
+  }
+}
+
+  
   .main-lower {
   height: 100vh;
   width: 100%;
 }
-.wrapper,
+.wrapper-1,
 .slide {
   position: relative;
   width: 100%;
@@ -121,18 +325,22 @@ a.button:hover {
    
  </style>
  <header class=" z-50 bg-papayawhip-light  font-Header text-black   mx-auto">
-        <section class="mx-auto flex max-w-full items-center justify-center p-4">
+        <section class="mx-auto bg-violet-200 flex max-w-full items-center justify-center p-4">
+           <div class="relative  rounded-full p-4 text-md leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20"> <span class="typing-text"></span> 
+           <a href="#" class="font-semibold text-indigo-600 ml-1"> <span class="absolute inset-0" aria-hidden="true"> <span class="text-violet-800" aria-hidden="true"> &rarr;</span></a>
+        </div>
             
-            <div class=" text-center     shadow-xl w-full  p-3 rounded-full">
+            <!-- <div class=" text-center     shadow-xl w-full  p-3 rounded-full">
                 
                 <nav class=" space-x-8 text-base md:block" aria-label="main">
-                  <p class=" text-md sm:text-xl font-Header font-bold text-violet-800"> <i class="bi bi-arrow-down-right-circle p-3 rounded-xl font-bold text-2xl text-violet-800"></i> Next Cohort Begins on July 3rd <i class="hidden bi bi-arrow-down-left-circle p-3 rounded-xl font-bold text-2xl text-violet-800"></i> </p> 
+                  <p class=" text-md sm:text-xl font-Header font-bold text-violet-800"> <i class="bi bi-arrow-down-right-circle p-3 rounded-xl font-bold text-2xl text-violet-800"></i>  <i class="hidden bi bi-arrow-down-left-circle p-3 rounded-xl font-bold text-2xl text-violet-800"></i> </p> 
                    
-            </div>
+            </div> -->
         </section>
-        
+       
        
     </header>
+     
     <main class=" w-full">
        <!-- <a  href="https://Store.techuni.io"
                     class="my-3 mx-6 z-10 text-white hover:bg-violet-900 bg-violet-700 p-6 flex justify-center items-center sm:w-1/2 w-72  rounded-md shadow-xl    text-xl" target="_blank"> <i class="fas fa-star"></i>
@@ -234,6 +442,9 @@ a.button:hover {
         <!-- <hr class="mx-auto w-1/2 mb-3 bg-black dark:bg-white" /> -->
 
         <!-- <hr class="mx-auto w-1/2 bg-black dark:bg-white" /> -->
+
+        
+
         <div class=" p-4 more"></div>
 
         <section
@@ -386,7 +597,7 @@ a.button:hover {
     
 
        <section class="main-lower swiper mySwiper">
-      <div class="wrapper swiper-wrapper">
+      <div class="wrapper-1 swiper-wrapper">
         <div class="slide swiper-slide">
           <img src="images/faculties/fanen.jpeg" alt="" class="image" />
           <div class="image-data">
@@ -538,6 +749,87 @@ a.button:hover {
         <img class="w-full sm:w-1/2" data-aos="zoom-in-right" data-aos-delay="400" src="images/ark-funds-homepage-illustration.svg" alt="hug" />
       </section>
 
+       <h2 class=" my-16 text-center font-Body text-3xl text-violet-800 font-bold  sm:text-5xl" >
+                What Our Past <span class="text-violet-900">Benefeciaries</span> Say
+            </h2>
+       <div class="wrapper my-12">
+    <div class="box">
+      <i class="fas fa-quote-left quote"></i>
+      <p>The Data Analytics course by TechUni is an excellent resource for anyone who is interested in learning more about data analysis or who wants to improve their skills in Microsoft Excel. The course is well-paced, challenging, and informative, and it is taught by an experienced and knowledgeable instructor. If you are interested in learning more about data analysis, I highly recommend the Data Analytics course by TechUni.</p>
+      <div class="content">
+        <div class="info">
+          <div class="name">Jachi Anyatonwu</div>
+          <div class="job">Data Analysis | May Cohort</div>
+          <div class="stars">
+              <i class="fas fa-check"></i>
+            <i class="text-violet-800">Verified Student</i>
+          </div>
+        </div>
+        <div class="image">
+          <img src="images/Jachi.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <i class="fas fa-quote-left quote"></i>
+      <p>The online course I took was extremely helpful and knowledgeable. I learnt to gather, clean and evaluate data sets, to answer questions and solve problems. The class was organised with a highly experienced instructor. I recommend this course to anyone looking to improve their skill in Data Analysis. Thanks for this opputunity, Dr Kelvin.</p>
+      <div class="content">
+        <div class="info">
+          <div class="name">Onyenwe Lilian Nneoma</div>
+          <div class="job">Data Analysis | May Cohort</div>
+          <div class="stars">
+           <i class="fas fa-check"></i>
+            <i class="text-violet-800">Verified Student</i>
+          </div>
+        </div>
+        <div class="image">
+          <img src="images/Lillian.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <i class="fas fa-quote-left  quote"></i>
+      <p>I'm a beneficiary of the Techuni scholarship of May Cohort.
+          Data analysis was my area of interest. I did had a great moment of knowledge impact in data analysing. I learnt how to clean up data, source for data to aid analysis, I learnt how to use the pivot table to summarize my data for easy visualization and also how to prepare a dashboard.
+
+          Techuni has really helped me upgrade in my analysis skill.
+
+          Thanks to Techuni for the opportunity..</p>
+      <div class="content">
+        <div class="info">
+          <div class="name">Gladden Ogbale Uka</div>
+          <div class="job">Data Analysis | May Cohort</div>
+          <div class="stars">
+            <i class="fas fa-check"></i>
+            <i class="text-violet-800">Verified Student</i>
+           
+          </div>
+        </div>
+        <div class="image">
+          <img src="images/Gladden.jpeg" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+<section class="vid-section">
+  <div class="container">
+      <div class="main-video">
+          <video src="videos/vid1.mp4" autoplay muted controls></video>
+          <i class='bx bx-x close'></i>
+      </div>
+      <div class="videos">
+        <video src="videos/vid1.mp4"></video>
+        <i class='bx bx-play-circle'></i>
+      </div>
+      
+      
+      <div class="videos">
+        <video src="videos/vid2.mp4"></video>
+        <i class='bx bx-play-circle'></i>
+      </div>
+    </div>
+  </section>
+
 
      
 
@@ -600,6 +892,8 @@ a.button:hover {
 
       <!-- Services section ends -->
 
+     
+
         <div class="peer "></div>
         <div data-aos="flip-right" data-aos-delay="400" class="my-24 flex flex-col w-full p-3 text-start   justify-between items-start sm:w-1/2 text-slate-900">
                 <h2 class="text-2xl font-Body text-slate-600 my-3">Our Community</h2>
@@ -611,6 +905,7 @@ a.button:hover {
             </div>
 
             <!-- <div class="night "></div> -->
+           
 
             <%- include("partials/footer"); -%>
 
@@ -743,6 +1038,27 @@ a.button:hover {
         },
       });
     </script>
+
+    <script>
+    const section = document.querySelector(".vid-section"),
+    mainVideo = document.querySelector(".main-video video"),
+     videos = document.querySelectorAll(".videos"),
+     close = document.querySelector(".close");
+     for (var i = 0; i < videos.length; i++) {
+       videos[i].addEventListener("click", (e)=>{
+         const target = e.target;
+         section.classList.add("active");
+         target.classList.add("active");
+         let src = document.querySelector(".videos.active video").src;
+         mainVideo.src = src;
+         close.addEventListener("click", ()=>{
+           section.classList.remove("active");
+           target.classList.remove("active");
+           mainVideo.src = "";
+         });
+       });
+     };
+  </script>
   
 
        

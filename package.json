@@ -7,7 +7,7 @@
     "start": "node ./bin/www",
     "start:dev": "nodemon ./src/bin/www",
     "test": "jest",
-    "tailwind": "npx tailwindcss -i ./src/input.css -o ./public/css/output.css --watch"
+    "tailwind": "npx tailwindcss -i ./srcTailwind/input.css -o ./public/css/output.css --watch"
   },
   "author": "Maurice Odo",
   "license": "ISC",
