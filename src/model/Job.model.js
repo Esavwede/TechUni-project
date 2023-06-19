@@ -6,10 +6,6 @@ const Schema = mongoose.Schema
 
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 096055b29247b87ea6b053de212141d7d4858c80
 const JobSchema = new Schema 
     (
         {
