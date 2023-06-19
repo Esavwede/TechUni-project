@@ -85,14 +85,8 @@ const getHomePage = function(req, res, next)
             {
 
                 logger.info(" Getting Jobs Page ")
-                logger.info(" Getting Jobs for jobs page ") 
                 
-                const numberOfJobsPerPage = 7
-                const numberOfJobsToSkip = 0 
-                const posts = await getJobsService(numberOfJobsPerPage, numberOfJobsToSkip)
-
-                
-                return res.render("jobs",{ posts }) 
+                return res.render("jobs") 
             }
             catch(e)
             {
@@ -102,7 +96,30 @@ const getHomePage = function(req, res, next)
             }
         }
 
+
+        const getJobsForJobsPage = async function(req, res, next)
+        {
+            try 
+            {
+
+                logger.info(" Getting Jobs for jobs page ") 
+                
+                const numberOfJobsPerPage = req.params.limit 
+                const numberOfJobsToSkip = req.params.skip 
+                const posts = await getJobsService(numberOfJobsPerPage, numberOfJobsToSkip)
+                
+                return res.json({ posts })
+            }
+            catch(e)
+            {
+                console.log(e) 
+                logger.error(e,' Error Occured while getting jobs page ') 
+                return res.render("error",{e}) 
+            }
+        }
+
+
        
 
-module.exports = { getHomePage, getCoursesPage, getFacultiesPage, getStudentsPage, getFaqPage, getJobsPage } 
+module.exports = { getHomePage, getCoursesPage, getFacultiesPage, getStudentsPage, getFaqPage, getJobsPage, getJobsForJobsPage } 
           

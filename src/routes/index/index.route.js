@@ -21,6 +21,7 @@ module.exports = function(app)
         router.get('/students', index.getStudentsPage ) 
         router.get('/jobs', index.getJobsPage )
         router.get('/faq', index.getFaqPage ) 
+        router.get('/jobs/:skip/:limit', index.getJobsForJobsPage ) 
 
         // Bind To app 
         app.use('/', router ) 
