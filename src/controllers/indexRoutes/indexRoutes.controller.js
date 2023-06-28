@@ -85,7 +85,6 @@ const getHomePage = function(req, res, next)
             {
 
                 logger.info(" Getting Jobs Page ")
-                
                 return res.render("jobs") 
             }
             catch(e)
