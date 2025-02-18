@@ -3,7 +3,7 @@
 require('dotenv').config() 
 const logger = require('../../system/logger/index') 
 const User = require('../../model/User.model') 
-const bcrypt = require('bcrypt') 
+const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken') 
 
 
