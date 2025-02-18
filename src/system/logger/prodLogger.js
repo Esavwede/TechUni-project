@@ -8,7 +8,7 @@ const prodLogger = pino(
             target: 'pino/file',
             options: { destination: `${ __dirname }/logs/prod/logs.txt`}
         },
-        level: process.env.APPLICATION_LOG_LEVEL, 
+        level: process.env.APPLICATION_LOG_LEVEL || 'info', 
         timestamp: pino.stdTimeFunctions.isoTime 
     }
 ) 
