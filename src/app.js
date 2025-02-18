@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 buildRoutes(app) 
 
 // Database 
-const db = createDatabaseConnection() 
+// const db = createDatabaseConnection() 
 
 
 // catch 404 and forward to error handler

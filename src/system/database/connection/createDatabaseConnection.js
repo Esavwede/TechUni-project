@@ -16,7 +16,7 @@ function createDatabaseConnection()
         {
             
             console.log(' Creating Database Connection ') 
-            mongoose.connect(DB_URI,DB_OPTIONS)
+            mongoose.connect(DB_URI)
             const db = mongoose.connection 
 
 
