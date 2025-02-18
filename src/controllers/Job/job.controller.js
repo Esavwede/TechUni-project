@@ -19,7 +19,6 @@ const getComposeJobPage = async function(req, res, next)
             }
 
 
-
 const create = async function(req, res, next)
         {
             try 
