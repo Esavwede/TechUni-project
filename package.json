@@ -4,8 +4,8 @@
   "description": "The TechUni Web Application",
   "main": "app.js",
   "scripts": {
-    "start": "node ./src/bin/www",
-    "start:dev": "nodemon ./src/bin/www",
+    "start": "node ./src/bin/www.js",
+    "start:dev": "nodemon ./src/bin/www.js",
     "test": "jest",
     "tailwind": "npx tailwindcss -i ./srcTailwind/input.css -o ./public/css/output.css --watch"
   },
